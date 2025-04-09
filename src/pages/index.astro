@@ -1,21 +1,35 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import ContextAlert from '../components/ContextAlert.astro';
-import Markdown from '../components/Markdown.astro';
-
-const explainer = `
-An Astro website can go way beyond static pages - on the right platform.
-
-Netlify supports not only [Streaming SSR](https://docs.astro.build/en/guides/server-side-rendering/#html-streaming) and fast [Edge Middleware](https://docs.astro.build/en/guides/middleware/), but also [on-demand revalidation](https://www.netlify.com/blog/cache-tags-and-purge-api-on-netlify/) and [stale-while-revalidate](https://www.netlify.com/blog/swr-and-fine-grained-cache-control/). 
-Any page or data can be rebuilt only when needed, without site visitors ever getting a performance hit.
-`;
+layout: ../layouts/Layout.astro
+title: "Seu negócio no Fluxo certo"
 ---
 
-<Layout title="Welcome to Astro.">
-    <ContextAlert class="mb-8" />
-    <h1 class="mb-10">Netlify Platform Starter for Astro</h1>
-    <Markdown content={explainer} class="mb-10 text-lg" />
-    <p>
-        <a href="https://docs.netlify.com/frameworks/astro/" class="btn btn-lg sm:min-w-64">Read the Docs</a>
-    </p>
-</Layout>
+<section class="hero">
+  <h1>Seu negócio no Fluxo certo</h1>
+  <p>Cuide do seu negócio, deixe que a Fluxo cuide do resto.</p>
+  <p>Atendimento, agendamentos automáticos, controle de clientes e muito mais – tudo em um só lugar.</p>
+</section>
+
+<section class="benefits">
+  <h2>Por que escolher a Fluxo?</h2>
+  <ul>
+    <li><strong>Até 70% menos tempo perdido</strong> com atendimento manual.</li>
+    <li><strong>3x mais eficiência</strong> na organização de agendamentos.</li>
+    <li><strong>Zero complicação</strong>: tudo automatizado.</li>
+  </ul>
+</section>
+
+<section class="plans">
+  <h2>Planos</h2>
+  <div class="plan">
+    <h3>Fluxo Essencial</h3>
+    <p>Ideal para começar: agendamentos automáticos e controle básico de clientes.</p>
+    <p><strong>R$ 149/mês</strong></p>
+  </div>
+  <div class="plan destaque">
+    <h3>Fluxo Pro</h3>
+    <p>Inclui tudo do Essencial + suporte personalizado, SAC inteligente e relatórios avançados.</p>
+    <p><strong>R$ 250/mês</strong></p>
+  </div>
+</section>
+
+
