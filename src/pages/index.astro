@@ -8,50 +8,58 @@ import { Button } from "@/components/ui/button";
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fluxo | Seu negócio no fluxo certo</title>
   </head>
-  <body class="bg-black text-white font-sans">
-    <section class="min-h-screen flex flex-col items-center justify-center px-4 text-center">
-      <h1 class="text-4xl md:text-6xl font-bold mb-4 text-white">
-        Seu negócio no <span class="text-purple-500">Fluxo certo</span>
-      </h1>
-      <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl">
-        Cuide do seu negócio, deixe que a Fluxo cuide do resto.
-      </p>
+  <body class="bg-gradient-to-b from-black via-zinc-900 to-black text-white font-sans">
+    <main class="min-h-screen flex items-center justify-center px-6 py-12">
+      <div class="max-w-4xl w-full text-center space-y-10">
+        <header>
+          <h1 class="text-5xl md:text-6xl font-extrabold leading-tight">
+            Seu negócio no <span class="text-purple-500">Fluxo certo</span>
+          </h1>
+          <p class="mt-4 text-lg md:text-xl text-zinc-300">
+            Automatize seu atendimento e ganhe tempo com a Fluxo.
+          </p>
+        </header>
 
-      <ul class="text-left space-y-3 text-gray-200 max-w-xl mb-10">
-        <li class="flex items-start gap-2">
-          <span class="text-purple-400">⚙️</span>
-          Agendamento automático com pagamento integrado
-        </li>
-        <li class="flex items-start gap-2">
-          <span class="text-green-400">💬</span>
-          Atendimento inteligente por WhatsApp
-        </li>
-        <li class="flex items-start gap-2">
-          <span class="text-blue-400">📊</span>
-          Relatórios e estatísticas sobre seus atendimentos
-        </li>
-        <li class="flex items-start gap-2">
-          <span class="text-red-400">🎯</span>
-          Foco total no seu serviço. A gente cuida do resto.
-        </li>
-      </ul>
+        <section class="bg-zinc-800/40 border border-zinc-700 backdrop-blur rounded-2xl p-8 md:p-10 shadow-xl">
+          <ul class="text-left space-y-6 text-base md:text-lg text-zinc-200">
+            <li class="flex items-start gap-3">
+              <span class="text-purple-400 text-xl">⚙️</span>
+              <span>Agendamento automático com <strong>pagamento integrado</strong>.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-green-400 text-xl">💬</span>
+              <span>Atendimento inteligente por <strong>WhatsApp</strong>.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-blue-400 text-xl">📊</span>
+              <span>Relatórios e <strong>estatísticas em tempo real</strong>.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-red-400 text-xl">🎯</span>
+              <span>Foco no seu serviço. <strong>A gente cuida do resto</strong>.</span>
+            </li>
+          </ul>
+        </section>
 
-      <div class="space-y-2 mb-8 text-gray-100">
-        <p><strong class="text-white">Fluxo Essencial:</strong> Comece agora com o básico bem feito.</p>
-        <p><strong class="text-white">Fluxo Pro:</strong> Desbloqueie funções avançadas e leve seu negócio a outro nível.</p>
+        <div class="text-zinc-300 space-y-2">
+          <p><strong class="text-white">Fluxo Essencial:</strong> Comece agora com o básico bem feito.</p>
+          <p><strong class="text-white">Fluxo Pro:</strong> Funções avançadas para o próximo nível.</p>
+        </div>
+
+        <a
+          href="https://calendly.com/syrinxum/test"
+          target="_blank"
+          class="inline-block bg-purple-600 hover:bg-purple-700 transition px-8 py-3 rounded-full text-white font-medium text-lg shadow-lg"
+        >
+          Comece agora
+        </a>
+
+        <footer>
+          <p class="text-sm text-zinc-400">
+            Domine o seu tempo. Cresça com a <span class="text-purple-400 font-semibold">Fluxo</span>.
+          </p>
+        </footer>
       </div>
-
-      <a
-        href="https://calendly.com/syrinxum/test"
-        target="_blank"
-        class="bg-purple-600 hover:bg-purple-700 transition px-6 py-3 rounded-full text-white font-semibold text-lg shadow-lg"
-      >
-        Comece agora
-      </a>
-
-      <p class="mt-6 text-sm text-gray-400">
-        Domine o seu tempo. Cresça com a <span class="text-purple-400 font-semibold">Fluxo</span>.
-      </p>
-    </section>
+    </main>
   </body>
 </html>
