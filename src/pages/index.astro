@@ -1,483 +1,126 @@
----
-// index.astro para Fluxo
----
-
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fluxo | Gestão de Agendamentos e Pagamentos para Salões e Barbearias</title>
-  <meta name="description" content="Transforme a gestão do seu negócio com a Fluxo. Sistema de agendamentos e pagamentos para salões de beleza e barbearias.">
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  
-  <!-- Tailwind CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  
-  <!-- AOS CSS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-    
-    body {
-      font-family: 'Poppins', sans-serif;
-    }
-    
-    h1, h2, h3, h4, .logo-text {
-      font-family: 'Montserrat', sans-serif;
-    }
-    
-    .gradient-bg {
-      background: linear-gradient(135deg, #6B46C1 0%, #9F7AEA 50%, #805AD5 100%);
-    }
-    
-    .header-link {
-      position: relative;
-    }
-    
-    .header-link::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 2px;
-      bottom: -2px;
-      left: 0;
-      background-color: #D6BCFA;
-      transition: width 0.3s ease;
-    }
-    
-    .header-link:hover::after {
-      width: 100%;
-    }
-    
-    .plan-card {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    
-    .plan-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    }
-    
-    .cta-button {
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    
-    .cta-button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    }
-  </style>
-</head>
-<body class="bg-gray-50">
-  <!-- Header Fixo -->
-  <header class="fixed top-0 left-0 w-full bg-purple-900 text-white z-50 shadow-lg">
-    <div class="container mx-auto flex justify-between items-center py-4 px-6">
-      <a href="#" class="logo-text text-2xl font-bold tracking-wider">
-        <span class="text-purple-300">F</span>luxo
-      </a>
-      
-      <nav class="hidden md:flex space-x-8">
-        <a href="#planos" class="header-link font-medium hover:text-purple-300 transition duration-300">Planos</a>
-        <a href="#contato" class="header-link font-medium hover:text-purple-300 transition duration-300">Contato</a>
-        <a href="#parceiros" class="header-link font-medium hover:text-purple-300 transition duration-300">Parceiros</a>
-      </nav>
-      
-      <!-- Menu Mobile -->
-      <div class="md:hidden">
-        <button id="mobile-menu-button" class="text-white focus:outline-none">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+<!-- Hero Section -->
+<section class="bg-gradient-to-br from-purple-900 to-purple-600 text-white py-20 md:py-32">
+  <div class="container mx-auto px-6">
+    <div class="flex flex-col md:flex-row items-center">
+      <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right" data-aos-duration="1000">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+          Seu negócio no <span class="text-purple-200">Fluxo</span> certo
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 text-purple-100">
+          Agendamentos automáticos, atendimento otimizado e sua rotina no controle.
+        </p>
+        <a href="#planos" class="bg-white text-purple-700 font-bold py-3 px-8 rounded-full text-lg hover:bg-purple-100 transition duration-300 inline-flex items-center shadow-lg transform hover:-translate-y-1">
+          Comece agora
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
           </svg>
-        </button>
+        </a>
+      </div>
+      <div class="md:w-1/2 flex justify-center" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+        <img src="https://via.placeholder.com/600x500?text=Produtividade+Fluxo" alt="Produtividade com Fluxo" class="rounded-lg shadow-2xl max-w-full h-auto" />
       </div>
     </div>
-    
-    <!-- Menu Mobile Dropdown -->
-    <div id="mobile-menu" class="hidden md:hidden bg-purple-800 pb-4 px-6">
-      <a href="#planos" class="block py-2 text-purple-200 hover:text-white">Planos</a>
-      <a href="#contato" class="block py-2 text-purple-200 hover:text-white">Contato</a>
-      <a href="#parceiros" class="block py-2 text-purple-200 hover:text-white">Parceiros</a>
-    </div>
-  </header>
+  </div>
+</section>
 
-  <!-- Seção Hero -->
-  <section class="gradient-bg text-white min-h-screen flex items-center pt-16">
-    <div class="container mx-auto px-6 py-24 text-center" data-aos="fade-up" data-aos-duration="1000">
-      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-        Transforme a gestão do seu negócio com a Fluxo
-      </h1>
-      <p class="text-xl md:text-2xl mb-10 text-purple-100 max-w-3xl mx-auto">
-        Mais agendamentos, mais clientes, mais lucro.
+<!-- Sobre a Fluxo -->
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Sobre a Fluxo</h2>
+      <div class="w-24 h-1 bg-purple-600 mx-auto"></div>
+    </div>
+    
+    <div class="max-w-4xl mx-auto text-center mb-16" data-aos="fade-up" data-aos-delay="200">
+      <p class="text-xl text-gray-600 leading-relaxed">
+        A Fluxo nasceu para transformar o atendimento de pequenos e médios negócios. Com <span class="font-semibold text-purple-700">inovações constantes</span>, <span class="font-semibold text-purple-700">crescimento sustentável</span> e <span class="font-semibold text-purple-700">compromisso com o cliente</span>, oferecemos soluções que automatizam, organizam e escalam seu negócio com eficiência e praticidade.
       </p>
-      <a href="#planos" class="cta-button bg-white text-purple-800 font-bold py-4 px-8 rounded-full text-lg inline-block hover:bg-purple-100 transition duration-300 shadow-lg">
-        Experimente Agora
-      </a>
-      
-      <div class="mt-16" data-aos="fade-up" data-aos-delay="200">
-        <img src="https://via.placeholder.com/800x450?text=Plataforma+Fluxo" alt="Plataforma Fluxo" class="max-w-full h-auto rounded-lg shadow-2xl mx-auto" />
-      </div>
     </div>
-  </section>
-
-  <!-- Seção Vantagens -->
-  <section class="py-20 bg-white">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-800" data-aos="fade-up">
-        Por que escolher a <span class="text-purple-700">Fluxo</span>?
-      </h2>
-      
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-        <div class="flex flex-col items-center text-center p-6" data-aos="fade-up" data-aos-delay="100">
-          <div class="text-5xl mb-4">⏱️</div>
-          <h3 class="text-xl font-bold mb-2 text-purple-800">Economize Tempo</h3>
-          <p class="text-gray-600">Automatize processos e foque no que realmente importa: seus clientes.</p>
-        </div>
-        
-        <div class="flex flex-col items-center text-center p-6" data-aos="fade-up" data-aos-delay="200">
-          <div class="text-5xl mb-4">📈</div>
-          <h3 class="text-xl font-bold mb-2 text-purple-800">Aumente seus Lucros</h3>
-          <p class="text-gray-600">Reduza faltas com lembretes automáticos e otimize sua agenda.</p>
-        </div>
-        
-        <div class="flex flex-col items-center text-center p-6" data-aos="fade-up" data-aos-delay="300">
-          <div class="text-5xl mb-4">📱</div>
-          <h3 class="text-xl font-bold mb-2 text-purple-800">Agendamento Online</h3>
-          <p class="text-gray-600">Seus clientes agendam 24h por dia, mesmo quando você está fechado.</p>
-        </div>
-        
-        <div class="flex flex-col items-center text-center p-6" data-aos="fade-up" data-aos-delay="400">
-          <div class="text-5xl mb-4">💳</div>
-          <h3 class="text-xl font-bold mb-2 text-purple-800">Pagamentos Integrados</h3>
-          <p class="text-gray-600">Receba pagamentos online, presenciais e por link com facilidade.</p>
-        </div>
-        
-        <div class="flex flex-col items-center text-center p-6" data-aos="fade-up" data-aos-delay="500">
-          <div class="text-5xl mb-4">📊</div>
-          <h3 class="text-xl font-bold mb-2 text-purple-800">Relatórios Detalhados</h3>
-          <p class="text-gray-600">Visualize métricas importantes para o crescimento do seu negócio.</p>
-        </div>
-        
-        <div class="flex flex-col items-center text-center p-6" data-aos="fade-up" data-aos-delay="600">
-          <div class="text-5xl mb-4">🔔</div>
-          <h3 class="text-xl font-bold mb-2 text-purple-800">Lembretes Automáticos</h3>
-          <p class="text-gray-600">Reduza faltas e aumente a satisfação com lembretes personalizados.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Seção de Planos -->
-  <section id="planos" class="py-20 bg-gray-100">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-800" data-aos="fade-up">
-        Escolha seu Plano
-      </h2>
-      
-      <div class="flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-8">
-        <!-- Plano Essencial -->
-        <div class="plan-card bg-purple-100 rounded-xl overflow-hidden shadow-lg max-w-md w-full" data-aos="fade-right">
-          <div class="bg-purple-600 py-6 px-8 text-white">
-            <h3 class="text-2xl font-bold">Essencial</h3>
-            <p class="opacity-90">Para quem está começando</p>
-          </div>
-          
-          <div class="p-8">
-            <div class="flex items-baseline mb-6">
-              <span class="text-4xl font-bold text-purple-800">R$97</span>
-              <span class="text-gray-600 ml-2">/mês</span>
-            </div>
-            
-            <p class="text-gray-700 mb-6 font-medium">Tudo que você precisa para começar a organizar seu salão.</p>
-            
-            <ul class="space-y-3 mb-8">
-              <li class="flex items-start">
-                <span class="text-green-500 mr-2">✅</span>
-                <span class="text-gray-700">Agenda online ilimitada</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-green-500 mr-2">✅</span>
-                <span class="text-gray-700">Cadastro de clientes</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-green-500 mr-2">✅</span>
-                <span class="text-gray-700">Lembretes por WhatsApp</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-green-500 mr-2">✅</span>
-                <span class="text-gray-700">Pagamentos por PIX</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-green-500 mr-2">✅</span>
-                <span class="text-gray-700">Suporte por e-mail</span>
-              </li>
-            </ul>
-            
-            <a href="#contato" class="cta-button block text-center bg-purple-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-purple-700 transition duration-300">
-              Começar Agora
-            </a>
-          </div>
-        </div>
-        
-        <!-- Plano Pro -->
-        <div class="plan-card bg-purple-200 rounded-xl overflow-hidden shadow-lg max-w-md w-full border-2 border-purple-500" data-aos="fade-left">
-          <div class="bg-purple-800 py-6 px-8 text-white relative">
-            <div class="absolute top-0 right-0 bg-yellow-400 text-purple-900 text-xs font-bold px-3 py-1 rounded-bl-lg">
-              POPULAR
-            </div>
-            <h3 class="text-2xl font-bold">Pro</h3>
-            <p class="opacity-90">Para negócios em crescimento</p>
-          </div>
-          
-          <div class="p-8">
-            <div class="flex items-baseline mb-6">
-              <span class="text-4xl font-bold text-purple-800">R$197</span>
-              <span class="text-gray-600 ml-2">/mês</span>
-            </div>
-            
-            <p class="text-gray-700 mb-6 font-medium">Recursos avançados para expandir seu negócio.</p>
-            
-            <ul class="space-y-3 mb-8">
-              <li class="flex items-start">
-                <span class="text-green-500 mr-2">✅</span>
-                <span class="text-gray-700">Tudo do plano Essencial</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-green-500 mr-2">✅</span>
-                <span class="text-gray-700">Múltiplos profissionais</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-green-500 mr-2">✅</span>
-                <span class="text-gray-700">Pagamentos com cartão</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-green-500 mr-2">✅</span>
-                <span class="text-gray-700">Controle de estoque</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-green-500 mr-2">✅</span>
-                <span class="text-gray-700">Fidelização de clientes</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-green-500 mr-2">✅</span>
-                <span class="text-gray-700">Relatórios avançados</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-green-500 mr-2">✅</span>
-                <span class="text-gray-700">Suporte prioritário</span>
-              </li>
-            </ul>
-            
-            <a href="#contato" class="cta-button block text-center bg-purple-700 text-white font-bold py-3 px-6 rounded-lg hover:bg-purple-800 transition duration-300">
-              Escolher Pro
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Seção Depoimentos -->
-  <section class="py-20 bg-white">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-800" data-aos="fade-up">
-        O que nossos clientes dizem
-      </h2>
-      
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-gray-50 p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="100">
-          <div class="text-yellow-400 mb-4">★★★★★</div>
-          <p class="text-gray-700 mb-4">"Desde que comecei a usar a Fluxo, minha agenda está sempre cheia e as faltas reduziram em mais de 70%. Foi o melhor investimento para o meu salão!"</p>
-          <p class="font-bold text-purple-800">Ana Souza</p>
-          <p class="text-sm text-gray-600">Studio Hair & Beauty</p>
-        </div>
-        
-        <div class="bg-gray-50 p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="200">
-          <div class="text-yellow-400 mb-4">★★★★★</div>
-          <p class="text-gray-700 mb-4">"Organização total! Agora consigo ver exatamente o desempenho de cada profissional e quais serviços geram mais lucro. Recomendo a todos."</p>
-          <p class="font-bold text-purple-800">Carlos Mendes</p>
-          <p class="text-sm text-gray-600">Barbearia King</p>
-        </div>
-        
-        <div class="bg-gray-50 p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="300">
-          <div class="text-yellow-400 mb-4">★★★★★</div>
-          <p class="text-gray-700 mb-4">"O sistema de lembretes automáticos é incrível. Meus clientes adoram a praticidade e eu economizo tempo que antes gastava fazendo confirmações."</p>
-          <p class="font-bold text-purple-800">Patricia Lima</p>
-          <p class="text-sm text-gray-600">Espaço Beleza Natural</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Seção Contato -->
-  <section id="contato" class="py-20 bg-gray-100">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-800" data-aos="fade-up">
-        Entre em Contato
-      </h2>
-      
-      <div class="max-w-lg mx-auto bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up">
-        <div class="gradient-bg p-6 text-white text-center">
-          <h3 class="text-xl font-bold">Tire suas dúvidas</h3>
-          <p class="text-purple-100">Nossa equipe está pronta para te ajudar</p>
-        </div>
-        
-        <form id="contact-form" class="p-8 space-y-4">
-          <div>
-            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nome completo</label>
-            <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500" placeholder="Seu nome">
-          </div>
-          
-          <div>
-            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
-            <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500" placeholder="seu@email.com">
-          </div>
-          
-          <div>
-            <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Telefone</label>
-            <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500" placeholder="(00) 00000-0000">
-          </div>
-          
-          <div>
-            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Mensagem</label>
-            <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500" placeholder="Como podemos ajudar?"></textarea>
-          </div>
-          
-          <button type="submit" class="w-full bg-purple-700 text-white font-bold py-3 px-6 rounded-lg hover:bg-purple-800 transition duration-300 shadow">
-            Enviar Mensagem
-          </button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- Seção Parceiros -->
-  <section id="parceiros" class="py-20 bg-white">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-800" data-aos="fade-up">
-        Nossos Parceiros
-      </h2>
-      
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-items-center">
-        <div class="w-40 h-24 bg-gray-200 rounded flex items-center justify-center" data-aos="fade-up" data-aos-delay="100">
-          <span class="text-gray-500 font-medium">Parceiro 1</span>
-        </div>
-        <div class="w-40 h-24 bg-gray-200 rounded flex items-center justify-center" data-aos="fade-up" data-aos-delay="200">
-          <span class="text-gray-500 font-medium">Parceiro 2</span>
-        </div>
-        <div class="w-40 h-24 bg-gray-200 rounded flex items-center justify-center" data-aos="fade-up" data-aos-delay="300">
-          <span class="text-gray-500 font-medium">Parceiro 3</span>
-        </div>
-        <div class="w-40 h-24 bg-gray-200 rounded flex items-center justify-center" data-aos="fade-up" data-aos-delay="400">
-          <span class="text-gray-500 font-medium">Parceiro 4</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-purple-900 text-white py-8">
-    <div class="container mx-auto px-6">
-      <div class="flex flex-col md:flex-row justify-between items-center">
-        <div class="mb-6 md:mb-0">
-          <a href="#" class="text-2xl font-bold">
-            <span class="text-purple-300">F</span>luxo
-          </a>
-          <p class="mt-2 text-purple-200">Transformando negócios de beleza</p>
-        </div>
-        
-        <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 text-center md:text-left">
-          <div>
-            <h4 class="font-bold mb-2 text-purple-300">Links</h4>
-            <ul class="space-y-2">
-              <li><a href="#" class="text-purple-100 hover:text-white transition duration-300">Home</a></li>
-              <li><a href="#planos" class="text-purple-100 hover:text-white transition duration-300">Planos</a></li>
-              <li><a href="#contato" class="text-purple-100 hover:text-white transition duration-300">Contato</a></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 class="font-bold mb-2 text-purple-300">Contato</h4>
-            <ul class="space-y-2">
-              <li class="text-purple-100">contato@getfluxo.com.br</li>
-              <li class="text-purple-100">(11) 99999-9999</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      
-      <div class="border-t border-purple-800 mt-8 pt-8 text-center text-sm text-purple-300">
-        <p>© 2025 Fluxo. Todos os direitos reservados.</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- AOS JS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  
-  <!-- Main JS -->
-  <script>
-    // Inicializar AOS
-    AOS.init({
-      duration: 800,
-      once: true
-    });
     
-    // Menu Mobile Toggle
-    document.getElementById('mobile-menu-button').addEventListener('click', function() {
-      const menu = document.getElementById('mobile-menu');
-      menu.classList.toggle('hidden');
-    });
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Inovação Constante -->
+      <div class="flex flex-col items-center text-center p-6 bg-purple-50 rounded-lg shadow-md transform transition duration-500 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+        <div class="text-purple-600 mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+          </svg>
+        </div>
+        <h3 class="font-bold text-xl mb-2 text-gray-800">Inovação Constante</h3>
+        <p class="text-gray-600">Sempre à frente com tecnologias e soluções que transformam seu negócio.</p>
+      </div>
+      
+      <!-- Crescimento Sustentável -->
+      <div class="flex flex-col items-center text-center p-6 bg-purple-50 rounded-lg shadow-md transform transition duration-500 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+        <div class="text-purple-600 mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+          </svg>
+        </div>
+        <h3 class="font-bold text-xl mb-2 text-gray-800">Crescimento Sustentável</h3>
+        <p class="text-gray-600">Planos que crescem com você, adaptados às suas necessidades.</p>
+      </div>
+      
+      <!-- Atendimento Personalizado -->
+      <div class="flex flex-col items-center text-center p-6 bg-purple-50 rounded-lg shadow-md transform transition duration-500 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+        <div class="text-purple-600 mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+          </svg>
+        </div>
+        <h3 class="font-bold text-xl mb-2 text-gray-800">Atendimento Personalizado</h3>
+        <p class="text-gray-600">Suporte dedicado e soluções adequadas ao perfil do seu negócio.</p>
+      </div>
+      
+      <!-- Foco em Resultados -->
+      <div class="flex flex-col items-center text-center p-6 bg-purple-50 rounded-lg shadow-md transform transition duration-500 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="400">
+        <div class="text-purple-600 mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+          </svg>
+        </div>
+        <h3 class="font-bold text-xl mb-2 text-gray-800">Foco em Resultados</h3>
+        <p class="text-gray-600">Métricas e relatórios para acompanhar o crescimento do seu negócio.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Como Funciona - 3 Passos -->
+<section class="py-20 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Como Funciona</h2>
+      <p class="text-xl text-gray-600">Em apenas 3 passos simples</p>
+      <div class="w-24 h-1 bg-purple-600 mx-auto mt-4"></div>
+    </div>
     
-    // Esconder menu quando clicar em link (mobile)
-    document.querySelectorAll('#mobile-menu a').forEach(link => {
-      link.addEventListener('click', function() {
-        document.getElementById('mobile-menu').classList.add('hidden');
-      });
-    });
-    
-    // Formulário de contato fictício
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
-      e.preventDefault();
+    <div class="flex flex-col md:flex-row justify-between items-center md:space-x-8">
+      <!-- Passo 1 -->
+      <div class="w-full md:w-1/3 mb-12 md:mb-0 flex flex-col items-center" data-aos="fade-up" data-aos-delay="100">
+        <div class="relative">
+          <div class="w-24 h-24 bg-purple-600 rounded-full flex items-center justify-center text-white text-3xl font-bold mb-6">1</div>
+          <div class="hidden md:block absolute top-12 -right-full w-full h-1 bg-purple-300"></div>
+        </div>
+        <h3 class="text-xl font-bold mb-4 text-gray-800 text-center">Escolha seu plano ideal</h3>
+        <p class="text-gray-600 text-center">Selecione entre nossos planos flexíveis que se adaptam ao tamanho do seu negócio.</p>
+      </div>
       
-      // Capturar os dados do formulário
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
+      <!-- Passo 2 -->
+      <div class="w-full md:w-1/3 mb-12 md:mb-0 flex flex-col items-center" data-aos="fade-up" data-aos-delay="300">
+        <div class="relative">
+          <div class="w-24 h-24 bg-purple-600 rounded-full flex items-center justify-center text-white text-3xl font-bold mb-6">2</div>
+          <div class="hidden md:block absolute top-12 -right-full w-full h-1 bg-purple-300"></div>
+        </div>
+        <h3 class="text-xl font-bold mb-4 text-gray-800 text-center">Configuramos tudo com você</h3>
+        <p class="text-gray-600 text-center">Nossa equipe personaliza o sistema de acordo com as necessidades do seu negócio.</p>
+      </div>
       
-      // Animação de envio
-      const submitButton = this.querySelector('button[type="submit"]');
-      submitButton.innerHTML = 'Enviando...';
-      submitButton.disabled = true;
-      
-      // Simular envio (backend fictício)
-      setTimeout(() => {
-        // Limpar formulário
-        this.reset();
-        
-        // Restaurar botão
-        submitButton.innerHTML = 'Mensagem Enviada!';
-        submitButton.classList.remove('bg-purple-700');
-        submitButton.classList.add('bg-green-600');
-        
-        // Feedback ao usuário
-        alert(`Obrigado, ${name}! Sua mensagem foi enviada com sucesso. Entraremos em contato através do e-mail ${email} em breve.`);
-        
-        // Restaurar botão após alguns segundos
-        setTimeout(() => {
-          submitButton.innerHTML = 'Enviar Mensagem';
-          submitButton.disabled = false;
-          submitButton.classList.remove('bg-green-600');
-          submitButton.classList.add('bg-purple-700');
-        }, 3000);
-      }, 1500);
-    });
-  </script>
-</body>
-</html>
+      <!-- Passo 3 -->
+      <div class="w-full md:w-1/3 flex flex-col items-center" data-aos="fade-up" data-aos-delay="500">
+        <div class="w-24 h-24 bg-purple-600 rounded-full flex items-center justify-center text-white text-3xl font-bold mb-6">3</div>
+        <h3 class="text-xl font-bold mb-4 text-gray-800 text-center">Seus clientes já podem agendar automaticamente</h3>
+        <p class="text-gray-600 text-center">Pronto! Seu negócio começa a receber agendamentos online 24 horas por dia.</p>
+      </div>
+    </div>
+  </div>
+</section>
