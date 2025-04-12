@@ -1,53 +1,151 @@
----
----
+<!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fluxo</title>
-    <link rel="stylesheet" href="/assets/style.css" />
-  </head>
-  <body>
-    <header>
-      <h1>Bem-vindo à Fluxo</h1>
-      <p>Agendamentos automáticos e suporte inteligente para o seu negócio.</p>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fluxo - Gestão Inteligente para Negócios</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --roxo-primario: #6C3EA8;
+      --roxo-escuro: #4B2779;
+      --cinza-claro: #f5f5f5;
+      --cinza: #ccc;
+      --preto: #1a1a1a;
+    }
 
-    <section class="hero">
-      <h2>Transforme o jeito que você gerencia seu negócio</h2>
-      <p>Simplifique sua rotina com soluções automatizadas de agendamento e atendimento.</p>
-      <a href="#planos" class="btn-cta">Conheça nossos planos</a>
-    </section>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
 
-    <section id="planos" class="planos-section">
-      <h2>Nossos Planos</h2>
-      <div class="planos-container">
-        <div class="plano-card">
-          <h3>Fluxo Essencial</h3>
-          <p class="preco">R$ 149/mês</p>
-          <ul>
-            <li>Agendamento automático</li>
-            <li>Suporte ao cliente por WhatsApp</li>
-            <li>Dashboard com relatórios básicos</li>
-          </ul>
-          <a href="/planos/essencial" class="btn-detalhes">Ver detalhes</a>
-        </div>
-        <div class="plano-card destaque">
-          <h3>Fluxo Pro</h3>
-          <p class="preco">R$ 250/mês</p>
-          <ul>
-            <li>Todos os recursos do Essencial</li>
-            <li>Relatórios avançados</li>
-            <li>Integrações com plataformas de pagamento</li>
-            <li>Personalização completa do sistema</li>
-          </ul>
-          <a href="/planos/pro" class="btn-detalhes">Ver detalhes</a>
-        </div>
-      </div>
-    </section>
+    body {
+      background-color: var(--cinza-claro);
+      color: var(--preto);
+      line-height: 1.6;
+    }
 
-    <footer>
-      <p>&copy; 2025 Fluxo. Todos os direitos reservados.</p>
-    </footer>
-  </body>
+    header {
+      background: var(--roxo-primario);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .cta {
+      margin-top: 1.5rem;
+    }
+
+    .cta a {
+      background-color: white;
+      color: var(--roxo-primario);
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .cta a:hover {
+      background-color: var(--cinza);
+    }
+
+    section {
+      padding: 3rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .benefits, .plans {
+      display: grid;
+      gap: 2rem;
+    }
+
+    .benefit, .plan {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .benefit h3, .plan h3 {
+      margin-bottom: 0.5rem;
+      color: var(--roxo-escuro);
+    }
+
+    .plans {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    footer {
+      background-color: var(--roxo-escuro);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Transforme a gestão do seu negócio com a Fluxo</h1>
+    <p>Mais agendamentos, mais clientes, mais lucro. Automatize, simplifique e veja seu negócio crescer.</p>
+    <div class="cta">
+      <a href="#planos">Conheça os Planos</a>
+    </div>
+  </header>
+
+  <section class="benefits">
+    <div class="benefit">
+      <h3>Gestão Inteligente</h3>
+      <p>Automatize agendamentos, organize clientes e reduza erros operacionais com uma solução feita sob medida.</p>
+    </div>
+    <div class="benefit">
+      <h3>Mais Tempo Livre</h3>
+      <p>Deixe que a Fluxo cuide das tarefas repetitivas enquanto você foca em crescer seu negócio.</p>
+    </div>
+    <div class="benefit">
+      <h3>Resultados Reais</h3>
+      <p>Clientes que usam Fluxo relatam até 30% de economia de tempo e aumento significativo nos agendamentos.</p>
+    </div>
+  </section>
+
+  <section class="plans" id="planos">
+    <div class="plan">
+      <h3>Fluxo Essencial</h3>
+      <p>Ideal para quem está começando. Gestão simples, agendamentos automatizados e suporte básico.</p>
+      <strong>R$ 149/mês</strong><br><br>
+      <a class="cta" href="#">Assine Agora</a>
+    </div>
+    <div class="plan">
+      <h3>Fluxo Pro</h3>
+      <p>Para quem quer mais: integrações avançadas, suporte prioritário e relatórios de desempenho.</p>
+      <strong>R$ 250/mês</strong><br><br>
+      <a class="cta" href="#">Assine Agora</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Fluxo. Todos os direitos reservados.</p>
+  </footer>
+</body>
 </html>
