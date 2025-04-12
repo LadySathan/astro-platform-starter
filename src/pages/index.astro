@@ -1,85 +1,104 @@
 ---
+import "../assets/style.css";
 ---
-<html lang="pt-BR">
+
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fluxo - Gestão Inteligente para Salões</title>
-    <link rel="stylesheet" href="/assets/styles.css" />
+    <title>Fluxo</title>
   </head>
 
   <body>
+    <!-- Header -->
     <header class="header">
-      <div class="container">
-        <h1 class="logo">Fluxo</h1>
-        <nav>
-          <ul class="nav-links">
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#servicos">Serviços</a></li>
-            <li><a href="#planos">Planos</a></li>
-            <li><a href="#contato">Contato</a></li>
-          </ul>
-        </nav>
-      </div>
+      <h1>Fluxo</h1>
+      <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#planos">Planos</a>
+        <a href="#contato">Contato</a>
+      </nav>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero">
       <div class="container">
         <h2>Gestão moderna, simples e eficiente para o seu salão</h2>
-        <p>Agendamentos automáticos, suporte rápido e tudo o que seu negócio precisa para crescer.</p>
+        <p>
+          Agendamentos automáticos, suporte rápido e tudo o que seu negócio precisa para crescer.
+        </p>
         <a href="#planos" class="btn">Conheça os Planos</a>
       </div>
     </section>
 
-    <section id="sobre" class="section">
+    <!-- Sobre nós -->
+    <section id="sobre" class="section alt">
       <div class="container">
         <h3>Sobre a Fluxo</h3>
-        <p>A Fluxo é uma solução feita para simplificar a rotina de salões de beleza e barbearias. Agendamentos, pagamentos e suporte, tudo em um só lugar.</p>
+        <p>
+          Fluxo é uma solução feita para simplificar a rotina de salões de beleza e barbearias.
+          Agendamentos, pagamentos e suporte, tudo em um só lugar.
+        </p>
       </div>
     </section>
 
-    <section id="servicos" class="section alt">
+    <!-- Serviços -->
+    <section id="servicos" class="section">
       <div class="container">
         <h3>O que oferecemos</h3>
-        <ul>
+        <ul class="features">
           <li>📅 Agendamento automático integrado</li>
-          <li>🤖 Suporte ao cliente eficiente</li>
+          <li>💬 Suporte ao cliente eficiente</li>
           <li>💳 Integração com pagamentos</li>
         </ul>
       </div>
     </section>
 
-    <section id="planos" class="section">
+    <!-- Planos -->
+    <section id="planos" class="section alt">
       <div class="container">
-        <h3>Planos</h3>
+        <h3 class="text-center">Nossos Planos</h3>
+
         <div class="plans">
-          <div class="plan">
+          <div class="plan destaque">
             <h4>Fluxo Essencial</h4>
-            <p>Ideal para começar</p>
             <strong>R$ 149/mês</strong>
+            <ul class="beneficios">
+              <li>✔️ Agendamento automático</li>
+              <li>✔️ Suporte rápido via WhatsApp</li>
+              <li>✔️ Dashboard simples e eficiente</li>
+            </ul>
+            <a href="/planos/essencial" class="btn">Ver detalhes</a>
           </div>
+
           <div class="plan destaque">
             <h4>Fluxo Pro</h4>
-            <p>Para quem quer ir além</p>
             <strong>R$ 250/mês</strong>
+            <ul class="beneficios">
+              <li>✔️ Tudo do Essencial</li>
+              <li>✔️ Agendamentos com integração de pagamento</li>
+              <li>✔️ Prioridade no suporte</li>
+              <li>✔️ Relatórios mensais de desempenho</li>
+            </ul>
+            <a href="/planos/pro" class="btn">Ver detalhes</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="contato" class="section alt">
+    <!-- Contato -->
+    <section id="contato" class="section">
       <div class="container">
         <h3>Entre em contato</h3>
-        <p>Nos chame no WhatsApp ou mande um direct no Instagram!</p>
-        <a href="https://wa.me/61982913633" class="btn">WhatsApp</a>
-        <a href="https://instagram.com/fluxo.tech" class="btn alt">Instagram</a>
+        <p>Estamos prontos para ajudar você a transformar seu salão. Fale conosco!</p>
+        <a href="https://wa.me/55SEUNUMERO" class="btn">Falar no WhatsApp</a>
       </div>
     </section>
 
+    <!-- Rodapé -->
     <footer class="footer">
-      <div class="container">
-        <p>© 2025 Fluxo • Todos os direitos reservados</p>
-      </div>
+      <p>&copy; 2025 Fluxo • Todos os direitos reservados</p>
     </footer>
   </body>
 </html>
