@@ -1,151 +1,97 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fluxo - Gestão Inteligente para Negócios</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --roxo-primario: #6C3EA8;
-      --roxo-escuro: #4B2779;
-      --cinza-claro: #f5f5f5;
-      --cinza: #ccc;
-      --preto: #1a1a1a;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Inter', sans-serif;
-    }
-
-    body {
-      background-color: var(--cinza-claro);
-      color: var(--preto);
-      line-height: 1.6;
-    }
-
-    header {
-      background: var(--roxo-primario);
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .cta {
-      margin-top: 1.5rem;
-    }
-
-    .cta a {
-      background-color: white;
-      color: var(--roxo-primario);
-      padding: 0.8rem 1.5rem;
-      border-radius: 8px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-
-    .cta a:hover {
-      background-color: var(--cinza);
-    }
-
-    section {
-      padding: 3rem 1rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .benefits, .plans {
-      display: grid;
-      gap: 2rem;
-    }
-
-    .benefit, .plan {
-      background: white;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    }
-
-    .benefit h3, .plan h3 {
-      margin-bottom: 0.5rem;
-      color: var(--roxo-escuro);
-    }
-
-    .plans {
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    }
-
-    footer {
-      background-color: var(--roxo-escuro);
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
-      margin-top: 3rem;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fluxo - Gestão Inteligente para Salões</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       }
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Transforme a gestão do seu negócio com a Fluxo</h1>
-    <p>Mais agendamentos, mais clientes, mais lucro. Automatize, simplifique e veja seu negócio crescer.</p>
-    <div class="cta">
-      <a href="#planos">Conheça os Planos</a>
-    </div>
-  </header>
+      .check-icon::before {
+        content: '✅';
+        margin-right: 0.5rem;
+      }
+    </style>
+  </head>
+  <body class="bg-gradient-to-br from-purple-900 to-indigo-900 text-white">
+    <!-- HEADER -->
+    <header class="p-6 flex justify-between items-center bg-purple-800 shadow-lg fixed top-0 left-0 w-full z-50 backdrop-blur-lg">
+      <a href="#home" class="text-3xl font-extrabold tracking-tight text-white hover:text-purple-300 transition">Fluxo</a>
+      <nav class="space-x-6 text-lg">
+        <a href="#planos" class="hover:text-purple-300 transition">Planos</a>
+        <a href="#contato" class="hover:text-purple-300 transition">Contato</a>
+        <a href="#parceiros" class="hover:text-purple-300 transition">Parceiros</a>
+      </nav>
+    </header>
 
-  <section class="benefits">
-    <div class="benefit">
-      <h3>Gestão Inteligente</h3>
-      <p>Automatize agendamentos, organize clientes e reduza erros operacionais com uma solução feita sob medida.</p>
-    </div>
-    <div class="benefit">
-      <h3>Mais Tempo Livre</h3>
-      <p>Deixe que a Fluxo cuide das tarefas repetitivas enquanto você foca em crescer seu negócio.</p>
-    </div>
-    <div class="benefit">
-      <h3>Resultados Reais</h3>
-      <p>Clientes que usam Fluxo relatam até 30% de economia de tempo e aumento significativo nos agendamentos.</p>
-    </div>
-  </section>
+    <!-- HERO SECTION -->
+    <section id="home" class="text-center py-32 px-4" data-aos="fade-up">
+      <h2 class="text-4xl md:text-5xl font-extrabold mb-6">Transforme a gestão do seu negócio com a Fluxo</h2>
+      <p class="text-lg md:text-xl mb-8">Mais agendamentos, mais clientes, mais lucro.</p>
+      <a href="#planos" class="bg-purple-600 hover:bg-purple-700 px-6 py-3 rounded-full text-white font-bold transition">Experimente Agora</a>
+    </section>
 
-  <section class="plans" id="planos">
-    <div class="plan">
-      <h3>Fluxo Essencial</h3>
-      <p>Ideal para quem está começando. Gestão simples, agendamentos automatizados e suporte básico.</p>
-      <strong>R$ 149/mês</strong><br><br>
-      <a class="cta" href="#">Assine Agora</a>
-    </div>
-    <div class="plan">
-      <h3>Fluxo Pro</h3>
-      <p>Para quem quer mais: integrações avançadas, suporte prioritário e relatórios de desempenho.</p>
-      <strong>R$ 250/mês</strong><br><br>
-      <a class="cta" href="#">Assine Agora</a>
-    </div>
-  </section>
+    <!-- PLANOS -->
+    <section id="planos" class="text-center py-24 px-6 bg-purple-950" data-aos="fade-up">
+      <h2 class="text-4xl font-bold mb-12">Escolha seu Plano</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+        <!-- Plano Essencial -->
+        <div class="bg-purple-700 p-8 rounded-2xl shadow-xl transform hover:scale-105 transition" data-aos="fade-right">
+          <h3 class="text-3xl font-bold mb-2">Fluxo Essencial</h3>
+          <p class="text-2xl font-semibold mb-3">R$149/mês</p>
+          <p class="mb-6 italic">Para começar com automação e controle.</p>
+          <ul class="text-left space-y-2">
+            <li class="check-icon">Agendamentos Ilimitados</li>
+            <li class="check-icon">Gestão de Clientes</li>
+            <li class="check-icon">Suporte Básico</li>
+          </ul>
+        </div>
 
-  <footer>
-    <p>&copy; 2025 Fluxo. Todos os direitos reservados.</p>
-  </footer>
-</body>
+        <!-- Plano Pro -->
+        <div class="bg-purple-600 p-8 rounded-2xl shadow-xl transform hover:scale-105 transition" data-aos="fade-left">
+          <h3 class="text-3xl font-bold mb-2">Fluxo Pro</h3>
+          <p class="text-2xl font-semibold mb-3">R$250/mês</p>
+          <p class="mb-6 italic">Para profissionalizar:</p>
+          <ul class="text-left space-y-2">
+            <li class="check-icon">Integração de Pagamento</li>
+            <li class="check-icon">Agendamento Automático</li>
+            <li class="check-icon">Relatório Mensal</li>
+            <li class="check-icon">Script de Resposta</li>
+            <li class="check-icon">Atendimento Automatizado no WhatsApp</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="py-24 px-6 max-w-4xl mx-auto" data-aos="fade-up">
+      <h2 class="text-3xl font-bold mb-6 text-center">Entre em contato</h2>
+      <form class="bg-purple-800 p-8 rounded-xl shadow-md space-y-4">
+        <input type="text" placeholder="Nome" class="w-full px-4 py-2 rounded text-black" />
+        <input type="email" placeholder="Email" class="w-full px-4 py-2 rounded text-black" />
+        <input type="text" placeholder="Telefone" class="w-full px-4 py-2 rounded text-black" />
+        <textarea placeholder="Mensagem" class="w-full px-4 py-2 rounded text-black"></textarea>
+        <button class="bg-purple-600 hover:bg-purple-700 px-6 py-2 rounded-full font-bold">Enviar</button>
+      </form>
+    </section>
+
+    <!-- PARCEIROS -->
+    <section id="parceiros" class="py-20 px-6 text-center bg-purple-900" data-aos="fade-up">
+      <h2 class="text-3xl font-bold mb-8">Nossos Parceiros</h2>
+      <p class="text-lg">Em breve, listaremos nossos parceiros oficiais e histórias de sucesso!</p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="text-center py-6 bg-purple-950 mt-10 text-sm">
+      <p>© 2025 Fluxo. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>
