@@ -1,85 +1,53 @@
 ---
-import "../../public/assets/style.css";
 ---
-
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fluxo</title>
+    <link rel="stylesheet" href="/assets/style.css" />
   </head>
   <body>
-    <header class="header">
-      <h1>Fluxo</h1>
-      <nav>
-        <a href="#sobre">Sobre</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#planos">Planos</a>
-        <a href="#contato">Contato</a>
-      </nav>
+    <header>
+      <h1>Bem-vindo à Fluxo</h1>
+      <p>Agendamentos automáticos e suporte inteligente para o seu negócio.</p>
     </header>
 
     <section class="hero">
-      <h2>Gestão moderna, simples e eficiente para o seu salão</h2>
-      <p>
-        Agendamentos automáticos, suporte rápido e tudo o que seu negócio precisa para crescer.
-      </p>
-      <a href="#planos" class="btn">Conheça os Planos</a>
+      <h2>Transforme o jeito que você gerencia seu negócio</h2>
+      <p>Simplifique sua rotina com soluções automatizadas de agendamento e atendimento.</p>
+      <a href="#planos" class="btn-cta">Conheça nossos planos</a>
     </section>
 
-    <section class="section alt" id="sobre">
-      <h3>Sobre a Fluxo</h3>
-      <p>
-        A Fluxo é uma solução feita para simplificar a rotina de salões de beleza e barbearias. Agendamentos, pagamentos e suporte, tudo em um só lugar.
-      </p>
-    </section>
-
-    <section class="section" id="servicos">
-      <h3>O que oferecemos</h3>
-      <ul class="features">
-        <li>📅 Agendamento automático integrado</li>
-        <li>🛠 Suporte ao cliente eficiente</li>
-        <li>💳 Integração com pagamentos</li>
-      </ul>
-    </section>
-
-    <section class="section alt" id="planos">
-      <h3>Nossos Planos</h3>
-      <div class="plans">
-        <div class="plan">
-          <h4>Fluxo Essencial</h4>
-          <strong>R$ 149/mês</strong>
-          <ul class="beneficios">
+    <section id="planos" class="planos-section">
+      <h2>Nossos Planos</h2>
+      <div class="planos-container">
+        <div class="plano-card">
+          <h3>Fluxo Essencial</h3>
+          <p class="preco">R$ 149/mês</p>
+          <ul>
             <li>Agendamento automático</li>
-            <li>Suporte rápido por e-mail</li>
-            <li>Dashboard básico</li>
+            <li>Suporte ao cliente por WhatsApp</li>
+            <li>Dashboard com relatórios básicos</li>
           </ul>
-          <a href="/planos/essencial" class="btn">Ver Detalhes</a>
+          <a href="/planos/essencial" class="btn-detalhes">Ver detalhes</a>
         </div>
-        <div class="plan">
-          <h4>Fluxo Pro</h4>
-          <strong>R$ 250/mês</strong>
-          <ul class="beneficios">
-            <li>Tudo do Essencial</li>
-            <li>Atendimento via WhatsApp</li>
-            <li>Dashboard avançado</li>
-            <li>Relatórios personalizados</li>
+        <div class="plano-card destaque">
+          <h3>Fluxo Pro</h3>
+          <p class="preco">R$ 250/mês</p>
+          <ul>
+            <li>Todos os recursos do Essencial</li>
+            <li>Relatórios avançados</li>
+            <li>Integrações com plataformas de pagamento</li>
+            <li>Personalização completa do sistema</li>
           </ul>
-          <a href="/planos/pro" class="btn">Ver Detalhes</a>
+          <a href="/planos/pro" class="btn-detalhes">Ver detalhes</a>
         </div>
       </div>
     </section>
 
-    <section class="section" id="contato">
-      <h3>Entre em contato</h3>
-      <p>
-        Ficou com dúvidas ou quer conversar? <br />
-        <a href="mailto:contato@getfluxo.com.br" class="btn">contato@getfluxo.com.br</a>
-      </p>
-    </section>
-
-    <footer class="footer">
-      <p>© 2025 Fluxo • Todos os direitos reservados</p>
+    <footer>
+      <p>&copy; 2025 Fluxo. Todos os direitos reservados.</p>
     </footer>
   </body>
 </html>
