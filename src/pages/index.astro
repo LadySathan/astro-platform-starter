@@ -1,87 +1,85 @@
 ---
-title: "Fluxo - Automação e Suporte para Negócios"
-layout: "../layouts/Base.astro"
 ---
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fluxo - Gestão Inteligente para Salões</title>
+    <link rel="stylesheet" href="/assets/styles.css" />
+  </head>
 
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fluxo oferece soluções de agendamento automático e suporte para empresas, melhorando a eficiência e a experiência do cliente.">
-    <title>{title}</title>
-    <link rel="stylesheet" href="/styles.css">
-</head>
-<body>
+  <body>
     <header class="header">
-        <nav class="navbar">
-            <div class="logo">
-                <img src="/images/logo-fluxo.png" alt="Fluxo Logo">
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home">Início</a></li>
-                <li><a href="#about">Sobre</a></li>
-                <li><a href="#services">Serviços</a></li>
-                <li><a href="#contact">Contato</a></li>
-            </ul>
+      <div class="container">
+        <h1 class="logo">Fluxo</h1>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#planos">Planos</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
         </nav>
+      </div>
     </header>
 
-    <section id="home" class="hero-section">
-        <div class="hero-content">
-            <h1>Transforme seu negócio com automação e agendamento inteligente</h1>
-            <p>A Fluxo facilita o gerenciamento de agendamentos e o atendimento ao cliente com ferramentas avançadas e soluções práticas para seu negócio.</p>
-            <a href="#contact" class="cta-button">Agende uma Demonstração</a>
+    <section class="hero">
+      <div class="container">
+        <h2>Gestão moderna, simples e eficiente para o seu salão</h2>
+        <p>Agendamentos automáticos, suporte rápido e tudo o que seu negócio precisa para crescer.</p>
+        <a href="#planos" class="btn">Conheça os Planos</a>
+      </div>
+    </section>
+
+    <section id="sobre" class="section">
+      <div class="container">
+        <h3>Sobre a Fluxo</h3>
+        <p>A Fluxo é uma solução feita para simplificar a rotina de salões de beleza e barbearias. Agendamentos, pagamentos e suporte, tudo em um só lugar.</p>
+      </div>
+    </section>
+
+    <section id="servicos" class="section alt">
+      <div class="container">
+        <h3>O que oferecemos</h3>
+        <ul>
+          <li>📅 Agendamento automático integrado</li>
+          <li>🤖 Suporte ao cliente eficiente</li>
+          <li>💳 Integração com pagamentos</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="planos" class="section">
+      <div class="container">
+        <h3>Planos</h3>
+        <div class="plans">
+          <div class="plan">
+            <h4>Fluxo Essencial</h4>
+            <p>Ideal para começar</p>
+            <strong>R$ 149/mês</strong>
+          </div>
+          <div class="plan destaque">
+            <h4>Fluxo Pro</h4>
+            <p>Para quem quer ir além</p>
+            <strong>R$ 250/mês</strong>
+          </div>
         </div>
+      </div>
     </section>
 
-    <section id="about" class="about-section">
-        <h2>Sobre a Fluxo</h2>
-        <p>A Fluxo é uma plataforma inovadora, dedicada a otimizar os processos de negócios com automação de agendamentos, suporte ao cliente e integração com ferramentas de pagamento, tornando a gestão mais eficiente e sem erros.</p>
-    </section>
-
-    <section id="services" class="services-section">
-        <h2>Nossos Serviços</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <h3>Agendamento Automático</h3>
-                <p>Automatize os agendamentos de seus clientes com nossa plataforma integrada.</p>
-            </div>
-            <div class="service-card">
-                <h3>Suporte ao Cliente</h3>
-                <p>Ofereça suporte instantâneo e personalizado para seus clientes com IA e automação.</p>
-            </div>
-            <div class="service-card">
-                <h3>Gestão de Pagamentos</h3>
-                <p>Integração fácil com plataformas de pagamento para facilitar suas transações.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact-section">
-        <h2>Entre em Contato</h2>
-        <form action="#" method="POST" class="contact-form">
-            <label for="name">Nome</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Mensagem</label>
-            <textarea id="message" name="message" required></textarea>
-
-            <button type="submit" class="submit-button">Enviar</button>
-        </form>
+    <section id="contato" class="section alt">
+      <div class="container">
+        <h3>Entre em contato</h3>
+        <p>Nos chame no WhatsApp ou mande um direct no Instagram!</p>
+        <a href="https://wa.me/61982913633" class="btn">WhatsApp</a>
+        <a href="https://instagram.com/fluxo.tech" class="btn alt">Instagram</a>
+      </div>
     </section>
 
     <footer class="footer">
-        <div class="footer-content">
-            <p>&copy; 2025 Fluxo | Todos os direitos reservados</p>
-            <div class="social-links">
-                <a href="https://instagram.com/fluxo" target="_blank">Instagram</a>
-                <a href="https://wa.me/fluxo" target="_blank">WhatsApp</a>
-            </div>
-        </div>
+      <div class="container">
+        <p>© 2025 Fluxo • Todos os direitos reservados</p>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
