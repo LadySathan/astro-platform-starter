@@ -1,176 +1,64 @@
 ---
-import '../src/styles/global.css';
+import "../styles/global.css";
+import heroImage from "../assets/imagens/fundo-homepage.png";
 ---
 
-<!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fluxo</title>
-    <link rel="icon" href="/favicon.ico">
+    <meta charset="UTF-8" />
+    <title>Fluxo - Gestão Inteligente</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
+
   <body>
-    <!-- Header -->
-    <header class="header">
-      <div class="container">
-        <div class="logo">
-          <a href="/">Fluxo</a>
-        </div>
-        <nav>
-          <ul class="nav-links">
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#planos">Planos</a></li>
-            <li><a href="#contato">Contato</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#parceiros">Parceiros</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-    <!-- Main Section -->
-    <main>
-      <!-- Hero Section -->
+    <main class="container">
       <section class="hero">
-        <div class="hero-content">
-          <h1>Fluxo</h1>
-          <h2>Seu negócio no Fluxo certo.</h2>
+        <div class="hero-overlay">
+          <h1 class="hero-title">Fluxo</h1>
+          <p class="hero-subtitle">Organize. Agende. Cresça.</p>
         </div>
+        <img src={heroImage.src} alt="Imagem de fundo Fluxo" class="hero-img" />
       </section>
 
-      <!-- Sobre a Fluxo -->
-      <section id="sobre" class="section">
-        <h2 class="section-title">Sobre a Fluxo</h2>
-        <p>
-          A Fluxo é a plataforma inovadora focada em soluções de agendamento automático, gestão de clientes e
-          melhoria do atendimento. Com foco em eficiência e qualidade, temos como missão transformar seu negócio
-          através da tecnologia.
-        </p>
+      <section class="benefits">
+        <h2 class="section-title">Como o Fluxo transforma seu negócio?</h2>
+        <ul class="benefits-list">
+          <li>📅 Agendamentos automáticos com confirmação por WhatsApp</li>
+          <li>💳 Integração com pagamento direto</li>
+          <li>📈 Economia de até 10h semanais em tarefas repetitivas</li>
+          <li>👥 Atendimento centralizado (SAC + suporte)</li>
+        </ul>
       </section>
 
-      <!-- Agilidade e Organização no Atendimento -->
-      <section class="section">
-        <h2 class="section-title">Agilidade e Organização no Atendimento</h2>
-        <div class="features">
-          <div class="feature">
-            <img src="/assets/time-icon.png" alt="Economia de tempo" />
-            <h3>Economia de tempo</h3>
-          </div>
-          <div class="feature">
-            <img src="/assets/increase-icon.png" alt="Aumento de agendamentos" />
-            <h3>Aumento de agendamentos</h3>
-          </div>
-          <div class="feature">
-            <img src="/assets/improve-icon.png" alt="Melhoria no atendimento" />
-            <h3>Melhoria no atendimento</h3>
-          </div>
-          <div class="feature">
-            <img src="/assets/cancel-icon.png" alt="Menor taxa de cancelamento" />
-            <h3>Menor taxa de cancelamento</h3>
-          </div>
-        </div>
-      </section>
-
-      <!-- Agendamento Automático -->
-      <section id="agendamento" class="section">
-        <h2 class="section-title">Agendamento Automático</h2>
-        <div class="stats">
-          <div class="stat">
-            <h3>Redução de 70% no tempo de atendimento inicial</h3>
-          </div>
-          <div class="stat">
-            <h3>Aumento de até 35% na taxa de comparecimento</h3>
-          </div>
-          <div class="stat">
-            <h3>Mais de 90% de aprovação dos clientes</h3>
-          </div>
-        </div>
-        <div class="graph">
-          <img src="/assets/agendamento-grafico.png" alt="Gráfico de Agendamento Automático" />
-        </div>
-      </section>
-
-      <!-- Avaliação dos Clientes -->
-      <section class="section">
-        <h2 class="section-title">Avaliação dos Clientes</h2>
-        <div class="testimonials">
-          <div class="testimonial">
-            <img src="/assets/client1.jpg" alt="Cliente 1" class="testimonial-img" />
-            <p>"A Fluxo transformou a maneira como gerenciamos nossos agendamentos. Aumento significativo no número de clientes!"</p>
-            <span>- João Silva, Cliente</span>
-          </div>
-          <div class="testimonial">
-            <img src="/assets/client2.jpg" alt="Cliente 2" class="testimonial-img" />
-            <p>"Excelente plataforma, muito fácil de usar e trouxe muito mais organização para o meu negócio!"</p>
-            <span>- Maria Souza, Cliente</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- Impacto em Desenvolvimento -->
-      <section class="section">
-        <h2 class="section-title">Impacto no Desenvolvimento</h2>
-        <div class="graph">
-          <img src="/assets/desempenho-grafico.png" alt="Gráfico de Desempenho" />
-        </div>
-      </section>
-
-      <!-- Planos -->
-      <section id="planos" class="section">
-        <h2 class="section-title">Planos</h2>
-        <div class="plans">
-          <div class="plan" id="plano-essencial">
-            <h3>Plano Essencial</h3>
-            <p class="price">R$ 149/mês</p>
-            <ul>
+      <section class="plans">
+        <h2 class="section-title">Escolha o plano ideal</h2>
+        <div class="plan-grid">
+          <div class="plan-card">
+            <h3 class="plan-name">Fluxo Essencial</h3>
+            <p class="plan-price">R$149/mês</p>
+            <ul class="plan-features">
               <li>Agendamento automático</li>
-              <li>Atendimento prioritário</li>
-              <li>Relatórios mensais</li>
+              <li>Integração WhatsApp</li>
+              <li>Suporte por e-mail</li>
             </ul>
-            <a href="/plano-essencial" class="btn">Ver Detalhes</a>
           </div>
-          <div class="plan" id="plano-pro">
-            <h3>Plano Pro</h3>
-            <p class="price">R$ 250/mês</p>
-            <ul>
-              <li>Tudo do Plano Essencial</li>
-              <li>Consultoria personalizada</li>
-              <li>Funcionalidades avançadas</li>
+
+          <div class="plan-card destaque">
+            <h3 class="plan-name">Fluxo Pro</h3>
+            <p class="plan-price">R$250/mês</p>
+            <ul class="plan-features">
+              <li>Tudo do Essencial</li>
+              <li>Sistema de pagamentos</li>
+              <li>Suporte dedicado</li>
+              <li>Automação completa</li>
             </ul>
-            <a href="/plano-pro" class="btn">Ver Detalhes</a>
           </div>
         </div>
       </section>
 
-      <!-- Fale Conosco -->
-      <section id="contato" class="section">
-        <h2 class="section-title">Fale Conosco</h2>
-        <div class="contact">
-          <div class="contact-item">
-            <img src="/assets/whatsapp-icon.png" alt="WhatsApp" />
-            <h3>WhatsApp</h3>
-            <p><a href="https://wa.me/5561982913633">(61) 98291-3633</a></p>
-          </div>
-          <div class="contact-item">
-            <img src="/assets/instagram-icon.png" alt="Instagram" />
-            <h3>Instagram</h3>
-            <p><a href="https://instagram.com/fluxo.tech">@fluxo.tech</a></p>
-          </div>
-          <div class="contact-item">
-            <img src="/assets/email-icon.png" alt="E-mail" />
-            <h3>E-mail</h3>
-            <p><a href="mailto:syrinxum@gmail.com">syrinxum@gmail.com</a></p>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
+      <footer class="footer">
         <p>&copy; 2025 Fluxo. Todos os direitos reservados.</p>
-      </div>
-    </footer>
+      </footer>
+    </main>
   </body>
 </html>
