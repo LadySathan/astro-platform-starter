@@ -1,149 +1,104 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fluxo - Seu negócio no Fluxo certo</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <style>
-    body { margin: 0; font-family: Arial, sans-serif; color: #333; }
-    header, footer { background: #4b0082; color: white; padding: 1rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
-    nav a { color: white; margin: 0 1rem; text-decoration: none; font-weight: bold; }
-    footer a { color: white; text-decoration: none; }
-    main { padding: 2rem; max-width: 1200px; margin: auto; }
-    section { margin-bottom: 4rem; }
-    h1, h2, h3 { color: #4b0082; }
-    .planos-container { display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; }
-    .plano { border: 2px solid #4b0082; border-radius: 10px; padding: 2rem; width: 300px; text-align: center; transition: 0.3s; cursor: pointer; }
-    .plano:hover { background: #f3f0fa; transform: scale(1.05); }
-    .preco { font-size: 2rem; font-weight: bold; color: #4b0082; }
-    .beneficios { text-align: left; margin-top: 1rem; }
-    .beneficios li { margin-bottom: 0.5rem; }
-    .avaliacoes { background: #f9f9f9; padding: 2rem; border-radius: 8px; }
-    .avaliacao { margin-bottom: 1.5rem; }
-    .contato-links a { display: flex; align-items: center; margin-bottom: 0.5rem; color: #4b0082; font-weight: bold; }
-    .contato-links i { margin-right: 0.5rem; }
-    canvas { max-width: 600px; margin: auto; display: block; }
-  </style>
-</head>
-<body>
+---
+layout: ../layouts/BaseLayout.astro
+title: Fluxo
+---
 
-<header>
-  <div><strong>Fluxo</strong></div>
-  <nav>
-    <a href="#planos">Planos</a>
-    <a href="#contato">Contato</a>
-    <a href="#parceiros">Parceiros</a>
-  </nav>
-</header>
+<section class="text-center py-20 bg-gradient-to-b from-purple-900 to-purple-700 text-white">
+  <h1 class="text-5xl font-extrabold mb-4">Seu negócio no <span class="text-yellow-300">Fluxo</span> certo</h1>
+  <p class="text-xl max-w-2xl mx-auto">Inovações constantes, Crescimento Sustentável, Compromisso com o Cliente. Evolua com a gente.</p>
+</section>
 
-<main>
-  <section>
-    <h1>Seu negócio no Fluxo certo</h1>
-    <p>Na Fluxo, acreditamos em <strong>inovações constantes</strong>, <strong>crescimento sustentável</strong> e <strong>compromisso com o cliente</strong>. Oferecemos soluções que realmente transformam o atendimento e a gestão do seu negócio.</p>
-  </section>
-
-  <section id="planos">
-    <h2>Escolha seu Plano</h2>
-    <p>Compare nossos planos e encontre a melhor opção para seu negócio.</p>
-    <div class="planos-container">
-      <div class="plano" onclick="window.location.href='planos/essencial.html'">
-        <h3>Plano Essencial</h3>
-        <div class="preco">R$149/mês</div>
-        <ul class="beneficios">
-          <li>Agendamento automático</li>
-          <li>Respostas personalizadas</li>
-          <li>Organização de atendimentos</li>
-          <li>Dashboard simples</li>
-        </ul>
-      </div>
-      <div class="plano" onclick="window.location.href='planos/pro.html'">
-        <h3>Plano Pro</h3>
-        <div class="preco">R$250/mês</div>
-        <ul class="beneficios">
-          <li>Todos os recursos do Essencial</li>
-          <li>Relatórios de desempenho</li>
-          <li>Suporte prioritário</li>
-          <li>Integrações avançadas</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Agendamento Automático</h2>
-    <p>Com o sistema de agendamento automático da Fluxo, seus clientes marcam horários com facilidade e autonomia. Estudos mostram que empresas que implementaram esse sistema tiveram:</p>
-    <ul>
-      <li>Redução de 70% no tempo de atendimento inicial</li>
-      <li>Aumento de até 35% na taxa de comparecimento</li>
-      <li>Mais de 90% de aprovação dos clientes</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Agilidade e Organização no Atendimento</h2>
-    <p>Com as respostas automáticas e organização centralizada do atendimento, você evita perda de clientes e melhora a experiência de quem entra em contato.</p>
-    <ul>
-      <li><strong>Economia de tempo</strong></li>
-      <li><strong>Aumento nos agendamentos</strong></li>
-      <li><strong>Melhoria no atendimento</strong></li>
-      <li><strong>Menor taxa de cancelamento</strong></li>
-    </ul>
-  </section>
-
-  <section class="avaliacoes">
-    <h2>O que dizem nossos clientes</h2>
-    <div class="avaliacao">
-      <p>“A Fluxo mudou a forma como nos organizamos. Hoje, economizamos horas toda semana!” — <em>Estética Bela</em></p>
-    </div>
-    <div class="avaliacao">
-      <p>“Agendamentos nunca mais foram um problema. A plataforma é simples e direta.” — <em>Barbearia Classe A</em></p>
-    </div>
-    <div class="avaliacao">
-      <p>“Excelente atendimento e suporte. O crescimento do nosso salão foi visível.” — <em>Studio Beleza Pura</em></p>
-    </div>
-  </section>
-
-  <section>
-    <h2>Impacto no Desempenho</h2>
-    <p>Veja o impacto da Fluxo no desempenho de um negócio real:</p>
-    <canvas id="graficoDesempenho"></canvas>
-    <script>
-      const ctx = document.getElementById('graficoDesempenho').getContext('2d');
-      new Chart(ctx, {
-        type: 'line',
-        data: {
-          labels: ['Jan', 'Fev', 'Mar', 'Abr'],
-          datasets: [{
-            label: 'Agendamentos mensais',
-            data: [20, 45, 75, 110],
-            borderColor: '#4b0082',
-            backgroundColor: 'rgba(75, 0, 130, 0.2)',
-            fill: true,
-            tension: 0.3
-          }]
-        },
-        options: {
-          responsive: true,
-          plugins: { legend: { display: true } }
-        }
-      });
-    </script>
-  </section>
-</main>
-
-<footer id="contato">
-  <div>
-    <strong>Fluxo</strong>
-    <p>© 2025 Todos os direitos reservados.</p>
+<section class="py-20 px-6 bg-white text-center">
+  <h2 class="text-4xl font-bold text-purple-800 mb-4">Agendamento Automático</h2>
+  <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-10">Agende com facilidade e aumente sua produtividade. Clientes relataram 93% de satisfação com a simplicidade do processo e negócios viram um crescimento médio de 27% no alcance após implementar nosso sistema.</p>
+  <div class="flex justify-center">
+    <img src="/images/grafico-agendamentos.png" alt="Gráfico de Crescimento de Agendamentos" class="w-full max-w-2xl shadow-xl rounded-2xl">
   </div>
-  <div class="contato-links">
-    <a href="mailto:syrinxum@gmail.com"><i class="fas fa-envelope"></i> syrinxum@gmail.com</a>
-    <a href="tel:+5561982913633"><i class="fas fa-phone"></i> (61) 98291-3633</a>
-    <a href="https://www.instagram.com/fluxo.tech" target="_blank"><i class="fab fa-instagram"></i> Fluxo.Tech</a>
-  </div>
-</footer>
+</section>
 
-</body>
-</html>
+<section class="py-20 px-6 bg-gray-100 text-center">
+  <h2 class="text-4xl font-bold text-purple-800 mb-4">Agilidade e Organização</h2>
+  <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-10">Respostas automáticas, atendimento inteligente e centralização de informações. Organize-se com Fluxo.</p>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+    <div class="bg-white shadow-md rounded-xl p-6">
+      <i class="fas fa-clock text-purple-600 text-3xl mb-2"></i>
+      <h3 class="text-xl font-semibold">Economia de tempo</h3>
+    </div>
+    <div class="bg-white shadow-md rounded-xl p-6">
+      <i class="fas fa-calendar-check text-purple-600 text-3xl mb-2"></i>
+      <h3 class="text-xl font-semibold">Mais agendamentos</h3>
+    </div>
+    <div class="bg-white shadow-md rounded-xl p-6">
+      <i class="fas fa-user-check text-purple-600 text-3xl mb-2"></i>
+      <h3 class="text-xl font-semibold">Clientes retidos</h3>
+    </div>
+    <div class="bg-white shadow-md rounded-xl p-6">
+      <i class="fas fa-headset text-purple-600 text-3xl mb-2"></i>
+      <h3 class="text-xl font-semibold">Melhor atendimento</h3>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 px-6 bg-white text-center">
+  <h2 class="text-4xl font-bold text-purple-800 mb-4">Avaliações de Clientes</h2>
+  <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-10">Veja o que nossos clientes dizem sobre a Fluxo:</p>
+  <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+    <div class="bg-gray-100 p-6 rounded-xl shadow">
+      <p class="italic">“Meu salão aumentou o número de clientes agendados em mais de 40%! Recomendo demais.”</p>
+      <h4 class="font-bold mt-4">– Aline, Salão TopHair</h4>
+    </div>
+    <div class="bg-gray-100 p-6 rounded-xl shadow">
+      <p class="italic">“Finalmente consegui organizar os atendimentos com respostas automáticas. Muito prático.”</p>
+      <h4 class="font-bold mt-4">– Bruno, Barbearia Alfa</h4>
+    </div>
+    <div class="bg-gray-100 p-6 rounded-xl shadow">
+      <p class="italic">“A Fluxo mudou meu atendimento! O sistema é moderno, fácil de usar e o suporte é ótimo.”</p>
+      <h4 class="font-bold mt-4">– Camila, Nail Studio</h4>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 px-6 bg-purple-50 text-center">
+  <h2 class="text-4xl font-bold text-purple-800 mb-2">Escolha seu Plano</h2>
+  <p class="text-lg text-gray-700 mb-12">Compare nossos planos e encontre a melhor opção para seu negócio.</p>
+  <div class="flex flex-col md:flex-row justify-center gap-10 max-w-5xl mx-auto">
+    <a href="/planos/essencial.html" class="bg-white hover:shadow-2xl shadow-lg p-8 rounded-2xl border border-purple-300 w-full md:w-1/2 transition-all">
+      <h3 class="text-3xl font-bold text-purple-700 mb-2">Plano Essencial</h3>
+      <p class="text-2xl text-gray-800 mb-4">R$149/mês</p>
+      <ul class="text-left list-disc list-inside text-gray-700">
+        <li>Agendamento automático</li>
+        <li>Respostas personalizadas</li>
+        <li>Organização de atendimentos</li>
+        <li>Suporte via e-mail</li>
+      </ul>
+    </a>
+    <a href="/planos/pro.html" class="bg-white hover:shadow-2xl shadow-lg p-8 rounded-2xl border border-purple-300 w-full md:w-1/2 transition-all">
+      <h3 class="text-3xl font-bold text-purple-700 mb-2">Plano Pro</h3>
+      <p class="text-2xl text-gray-800 mb-4">R$250/mês</p>
+      <ul class="text-left list-disc list-inside text-gray-700">
+        <li>Tudo do Essencial +</li>
+        <li>Integrações avançadas</li>
+        <li>Prioridade no suporte</li>
+        <li>Relatórios e insights</li>
+      </ul>
+    </a>
+  </div>
+</section>
+
+<section class="py-20 px-6 bg-white text-center">
+  <h2 class="text-4xl font-bold text-purple-800 mb-6">Fale com a gente</h2>
+  <div class="flex flex-col items-center space-y-4">
+    <a href="mailto:syrinxum@gmail.com" class="flex items-center space-x-2 text-purple-700 text-lg">
+      <i class="fas fa-envelope"></i>
+      <span>syrinxum@gmail.com</span>
+    </a>
+    <a href="tel:+5561982913633" class="flex items-center space-x-2 text-purple-700 text-lg">
+      <i class="fas fa-phone"></i>
+      <span>(61) 98291-3633</span>
+    </a>
+    <a href="https://instagram.com/Fluxo.Tech" target="_blank" class="flex items-center space-x-2 text-purple-700 text-lg">
+      <i class="fab fa-instagram"></i>
+      <span>@Fluxo.Tech</span>
+    </a>
+  </div>
+</section>
