@@ -1,282 +1,186 @@
-<!-- Hero Section -->
-<section class="bg-gradient-to-br from-purple-900 to-purple-600 text-white py-20 md:py-32">
-  <div class="container mx-auto px-6">
-    <div class="flex flex-col md:flex-row items-center">
-      <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right" data-aos-duration="1000">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-          Seu negócio no <span class="text-purple-200">Fluxo</span> certo
-        </h1>
-        <p class="text-xl md:text-2xl mb-8 text-purple-100">
-          Agendamentos automáticos, atendimento otimizado e sua rotina no controle.
-        </p>
-        <a href="#planos" class="bg-white text-purple-700 font-bold py-3 px-8 rounded-full text-lg hover:bg-purple-100 transition duration-300 inline-flex items-center shadow-lg transform hover:-translate-y-1">
-          Comece agora
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-          </svg>
-        </a>
-      </div>
-      <div class="md:w-1/2 flex justify-center" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
-        <img src="https://via.placeholder.com/600x500?text=Produtividade+Fluxo" alt="Produtividade com Fluxo" class="rounded-lg shadow-2xl max-w-full h-auto" />
-      </div>
-    </div>
-  </div>
-</section>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fluxo | Seu negócio no Fluxo certo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9fb;
+      color: #222;
+      line-height: 1.6;
+    }
+    header, footer {
+      background-color: #5A30C6;
+      color: white;
+      padding: 1rem 2rem;
+    }
+    header nav a, footer a {
+      color: white;
+      text-decoration: none;
+      margin-right: 1rem;
+    }
+    .container {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h1, h2 {
+      color: #5A30C6;
+    }
+    .highlight {
+      background: #eee;
+      padding: 1rem;
+      border-radius: 8px;
+      margin: 2rem 0;
+    }
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .benefit-box {
+      background: #fff;
+      padding: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+    .testimonials {
+      background: #f0f0f5;
+      padding: 2rem;
+      border-radius: 8px;
+      margin-top: 2rem;
+    }
+    .testimonial {
+      border-left: 4px solid #5A30C6;
+      padding-left: 1rem;
+      margin-bottom: 1rem;
+    }
+    .contact-box {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .contact-box a {
+      display: inline-block;
+      margin: 0.5rem;
+      text-decoration: none;
+      color: #5A30C6;
+      font-weight: bold;
+    }
+    .contact-box svg {
+      width: 20px;
+      height: 20px;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+    .chart-container {
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Fluxo</h1>
+    <nav>
+      <a href="#planos">Planos</a>
+      <a href="#contato">Contato</a>
+      <a href="#parceiros">Parceiros</a>
+    </nav>
+  </header>
 
-<!-- Sobre a Fluxo -->
-<section class="py-20 bg-white">
-  <div class="container mx-auto px-6">
-    <div class="text-center mb-16" data-aos="fade-up">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Sobre a Fluxo</h2>
-      <div class="w-24 h-1 bg-purple-600 mx-auto"></div>
-    </div>
-    
-    <div class="max-w-4xl mx-auto text-center mb-16" data-aos="fade-up" data-aos-delay="200">
-      <p class="text-xl text-gray-600 leading-relaxed">
-        A Fluxo nasceu para transformar o atendimento de pequenos e médios negócios. Com <span class="font-semibold text-purple-700">inovações constantes</span>, <span class="font-semibold text-purple-700">crescimento sustentável</span> e <span class="font-semibold text-purple-700">compromisso com o cliente</span>, oferecemos soluções que automatizam, organizam e escalam seu negócio com eficiência e praticidade.
-      </p>
-    </div>
-    
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      <!-- Inovação Constante -->
-      <div class="flex flex-col items-center text-center p-6 bg-purple-50 rounded-lg shadow-md transform transition duration-500 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
-        <div class="text-purple-600 mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-          </svg>
-        </div>
-        <h3 class="font-bold text-xl mb-2 text-gray-800">Inovação Constante</h3>
-        <p class="text-gray-600">Sempre à frente com tecnologias e soluções que transformam seu negócio.</p>
-      </div>
-      
-      <!-- Crescimento Sustentável -->
-      <div class="flex flex-col items-center text-center p-6 bg-purple-50 rounded-lg shadow-md transform transition duration-500 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
-        <div class="text-purple-600 mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-          </svg>
-        </div>
-        <h3 class="font-bold text-xl mb-2 text-gray-800">Crescimento Sustentável</h3>
-        <p class="text-gray-600">Planos que crescem com você, adaptados às suas necessidades.</p>
-      </div>
-      
-      <!-- Atendimento Personalizado -->
-      <div class="flex flex-col items-center text-center p-6 bg-purple-50 rounded-lg shadow-md transform transition duration-500 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
-        <div class="text-purple-600 mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
-          </svg>
-        </div>
-        <h3 class="font-bold text-xl mb-2 text-gray-800">Atendimento Personalizado</h3>
-        <p class="text-gray-600">Suporte dedicado e soluções adequadas ao perfil do seu negócio.</p>
-      </div>
-      
-      <!-- Foco em Resultados -->
-      <div class="flex flex-col items-center text-center p-6 bg-purple-50 rounded-lg shadow-md transform transition duration-500 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="400">
-        <div class="text-purple-600 mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-          </svg>
-        </div>
-        <h3 class="font-bold text-xl mb-2 text-gray-800">Foco em Resultados</h3>
-        <p class="text-gray-600">Métricas e relatórios para acompanhar o crescimento do seu negócio.</p>
-      </div>
-    </div>
-  </div>
-</section>
+  <main class="container">
+    <section>
+      <h2>Seu negócio no Fluxo certo</h2>
+      <p>A Fluxo nasceu para transformar a forma como pequenos negócios lidam com atendimento, agendamentos e organização. Nosso foco está em três pilares: Inovações Constantes, Crescimento Sustentável e Compromisso com o Cliente.</p>
+    </section>
 
-<!-- Como Funciona - 3 Passos -->
-<section class="py-20 bg-gray-50">
-  <div class="container mx-auto px-6">
-    <div class="text-center mb-16" data-aos="fade-up">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Como Funciona</h2>
-      <p class="text-xl text-gray-600">Em apenas 3 passos simples</p>
-      <div class="w-24 h-1 bg-purple-600 mx-auto mt-4"></div>
-    </div>
-    
-    <div class="flex flex-col md:flex-row justify-between items-center md:space-x-8">
-      <!-- Passo 1 -->
-      <div class="w-full md:w-1/3 mb-12 md:mb-0 flex flex-col items-center" data-aos="fade-up" data-aos-delay="100">
-        <div class="relative">
-          <div class="w-24 h-24 bg-purple-600 rounded-full flex items-center justify-center text-white text-3xl font-bold mb-6">1</div>
-          <div class="hidden md:block absolute top-12 -right-full w-full h-1 bg-purple-300"></div>
-        </div>
-        <h3 class="text-xl font-bold mb-4 text-gray-800 text-center">Escolha seu plano ideal</h3>
-        <p class="text-gray-600 text-center">Selecione entre nossos planos flexíveis que se adaptam ao tamanho do seu negócio.</p>
-      </div>
-      
-      <!-- Passo 2 -->
-      <div class="w-full md:w-1/3 mb-12 md:mb-0 flex flex-col items-center" data-aos="fade-up" data-aos-delay="300">
-        <div class="relative">
-          <div class="w-24 h-24 bg-purple-600 rounded-full flex items-center justify-center text-white text-3xl font-bold mb-6">2</div>
-          <div class="hidden md:block absolute top-12 -right-full w-full h-1 bg-purple-300"></div>
-        </div>
-        <h3 class="text-xl font-bold mb-4 text-gray-800 text-center">Configuramos tudo com você</h3>
-        <p class="text-gray-600 text-center">Nossa equipe personaliza o sistema de acordo com as necessidades do seu negócio.</p>
-      </div>
-      
-      <!-- Passo 3 -->
-      <div class="w-full md:w-1/3 flex flex-col items-center" data-aos="fade-up" data-aos-delay="500">
-        <div class="w-24 h-24 bg-purple-600 rounded-full flex items-center justify-center text-white text-3xl font-bold mb-6">3</div>
-        <h3 class="text-xl font-bold mb-4 text-gray-800 text-center">Seus clientes já podem agendar automaticamente</h3>
-        <p class="text-gray-600 text-center">Pronto! Seu negócio começa a receber agendamentos online 24 horas por dia.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    <section class="highlight">
+      <h2>Agendamento Automático</h2>
+      <p>Com a Fluxo, seus clientes agendam com facilidade, em qualquer horário. A integração com ferramentas como o Calendly permite um fluxo contínuo, com confirmação automática e lembretes.</p>
+      <ul>
+        <li>🎯 Aumento médio de 43% nos agendamentos mensais.</li>
+        <li>⏱️ Redução de 60% no tempo de resposta.</li>
+        <li>📈 Satisfação geral de 94% com a experiência de agendamento.</li>
+      </ul>
+    </section>
 
-<!-- Seção: Agendamento Automático -->
-<section class="py-20 bg-white">
-  <div class="container mx-auto px-6">
-    <div class="flex flex-col lg:flex-row items-center">
-      <div class="lg:w-1/2 mb-10 lg:mb-0" data-aos="fade-right" data-aos-duration="1000">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-          <span class="flex items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-purple-600 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            Agendamento Automático
-          </span>
-        </h2>
-        <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-          Com o sistema de <span class="font-semibold text-purple-700">agendamento automático da Fluxo</span>, você evita erros, ganha tempo e melhora a experiência do cliente. Com integração de pagamento, confirmação por e-mail e WhatsApp, seus serviços ficam acessíveis 24h.
-        </p>
-        
-        <div class="space-y-6">
-          <div class="flex items-start" data-aos="fade-up" data-aos-delay="100">
-            <div class="bg-purple-100 p-3 rounded-full mr-4">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-              </svg>
-            </div>
-            <div>
-              <h3 class="font-bold text-xl mb-1 text-gray-800">Até 3x mais agendamentos</h3>
-              <p class="text-gray-600">Negócios que usam Fluxo aumentam significativamente o volume de marcações.</p>
-            </div>
-          </div>
-          
-          <div class="flex items-start" data-aos="fade-up" data-aos-delay="200">
-            <div class="bg-purple-100 p-3 rounded-full mr-4">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
-              </svg>
-            </div>
-            <div>
-              <h3 class="font-bold text-xl mb-1 text-gray-800">92% de satisfação dos clientes</h3>
-              <p class="text-gray-600">Excelente experiência de marcação resulta em clientes mais satisfeitos.</p>
-            </div>
-          </div>
-          
-          <div class="flex items-start" data-aos="fade-up" data-aos-delay="300">
-            <div class="bg-purple-100 p-3 rounded-full mr-4">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-              </svg>
-            </div>
-            <div>
-              <h3 class="font-bold text-xl mb-1 text-gray-800">Redução de 60% em mensagens</h3>
-              <p class="text-gray-600">Menos tempo gasto com mensagens manuais no WhatsApp.</p>
-            </div>
-          </div>
-        </div>
+    <section>
+      <h2>Agilidade e Organização</h2>
+      <p>Tenha respostas automáticas, registro de clientes e muito mais com Fluxo. Evite desencontros, centralize atendimentos e mantenha tudo sob controle, mesmo nos dias mais cheios.</p>
+      <div class="benefits">
+        <div class="benefit-box">✅ Economia de Tempo</div>
+        <div class="benefit-box">📅 Aumento de Agendamentos</div>
+        <div class="benefit-box">🔔 Nunca mais perca clientes</div>
+        <div class="benefit-box">💬 Atendimento mais rápido e eficiente</div>
       </div>
-      
-      <div class="lg:w-1/2 lg:pl-16" data-aos="fade-left" data-aos-duration="1000">
-        <div class="bg-purple-50 p-6 rounded-2xl shadow-lg">
-          <img src="https://via.placeholder.com/600x400?text=Sistema+de+Agendamento" alt="Sistema de Agendamento Fluxo" class="rounded-lg w-full" />
-          
-          <div class="mt-8 p-5 bg-white rounded-xl shadow-sm">
-            <div class="flex items-center mb-4">
-              <div class="h-3 w-3 bg-red-500 rounded-full mr-1.5"></div>
-              <div class="h-3 w-3 bg-yellow-500 rounded-full mr-1.5"></div>
-              <div class="h-3 w-3 bg-green-500 rounded-full"></div>
-            </div>
-            
-            <div class="space-y-3">
-              <div class="flex justify-between items-center p-2 bg-purple-100 rounded">
-                <span class="font-medium">Corte Masculino</span>
-                <span class="text-purple-700">10:00 - 10:45</span>
-              </div>
-              <div class="flex justify-between items-center p-2 bg-purple-100 rounded">
-                <span class="font-medium">Manicure</span>
-                <span class="text-purple-700">11:00 - 12:00</span>
-              </div>
-              <div class="flex justify-between items-center p-2 bg-purple-100 rounded">
-                <span class="font-medium">Coloração</span>
-                <span class="text-purple-700">14:30 - 16:00</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- Seção: Agilidade e Organização -->
-<section class="py-20 bg-gray-50">
-  <div class="container mx-auto px-6">
-    <div class="text-center mb-16" data-aos="fade-up">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Agilidade e Organização</h2>
-      <div class="w-24 h-1 bg-purple-600 mx-auto mb-6"></div>
-      <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-        A Fluxo oferece <span class="font-semibold text-purple-700">respostas automáticas</span>, organização de horários, integração com calendário e relatórios de agendamentos. Sua rotina fica organizada, e seus clientes sempre bem atendidos.
-      </p>
-    </div>
-    
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      <!-- Economia de tempo -->
-      <div class="bg-white p-6 rounded-xl shadow-md transition duration-300 hover:shadow-xl transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
-        <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-        </div>
-        <h3 class="text-xl font-bold mb-3 text-center text-gray-800">Economia de tempo</h3>
-        <p class="text-gray-600 text-center">Reduza até 70% do tempo gasto com agendamentos e comunicação manual.</p>
+    <section class="testimonials">
+      <h2>O que nossos clientes dizem</h2>
+      <div class="testimonial">
+        <p>“Depois que adotei a Fluxo no meu salão, os agendamentos praticamente dobraram e parei de perder clientes por falta de resposta.” – Amanda, Studio Hair</p>
       </div>
-      
-      <!-- Aumento de agendamentos -->
-      <div class="bg-white p-6 rounded-xl shadow-md transition duration-300 hover:shadow-xl transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
-        <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-          </svg>
-        </div>
-        <h3 class="text-xl font-bold mb-3 text-center text-gray-800">Aumento de agendamentos</h3>
-        <p class="text-gray-600 text-center">Disponibilidade 24h para seus clientes agendarem quando preferirem.</p>
+      <div class="testimonial">
+        <p>“Com a Fluxo, organizei meu atendimento e ganhei tempo para focar no que importa: meus clientes.” – Rafael, Barber Club</p>
       </div>
-      
-      <!-- Não perder mais clientes -->
-      <div class="bg-white p-6 rounded-xl shadow-md transition duration-300 hover:shadow-xl transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
-        <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-          </svg>
-        </div>
-        <h3 class="text-xl font-bold mb-3 text-center text-gray-800">Não perder mais clientes</h3>
-        <p class="text-gray-600 text-center">Lembretes automáticos reduzem faltas e maximizam sua capacidade.</p>
-      </div>
-      
-      <!-- Melhoria no atendimento -->
-      <div class="bg-white p-6 rounded-xl shadow-md transition duration-300 hover:shadow-xl transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="400">
-        <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-          </svg>
-        </div>
-        <h3 class="text-xl font-bold mb-3 text-center text-gray-800">Melhoria no atendimento</h3>
-        <p class="text-gray-600 text-center">Mais tempo para focar na qualidade e personalização do serviço.</p>
-      </div>
-    </div>
-    
-    <div class="mt-16 text-center" data-aos="fade-up" data-aos-delay="500">
-      <a href="#planos" class="bg-purple-600 text-white font-bold py-3 px-8 rounded-full inline-flex items-center hover:bg-purple-700 transition duration-300 shadow-lg transform hover:-translate-y-1">
-        Conheça nossos planos
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-          <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-        </svg>
+    </section>
+
+    <section class="chart-container">
+      <h2>Resultados Reais</h2>
+      <canvas id="growthChart" width="100%" height="50"></canvas>
+    </section>
+
+    <section id="contato" class="contact-box">
+      <h2>Fale com a gente</h2>
+      <a href="mailto:syrinxum@gmail.com">
+        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1..."/></svg>
+        syrinxum@gmail.com
+      </a><br>
+      <a href="tel:+5561982913633">
+        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M6.6 10.8c1.6 3.2 4.2 5.8 7.4 7.4..."/></svg>
+        (61) 98291-3633
+      </a><br>
+      <a href="https://instagram.com/fluxo.tech" target="_blank">
+        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M7.75 2h8.5C19.55 2 22 4.45..."/></svg>
+        @fluxo.tech
       </a>
-    </div>
-  </div>
-</section>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Fluxo. Todos os direitos reservados.</p>
+    <nav>
+      <a href="/">Home</a>
+      <a href="#planos">Planos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const ctx = document.getElementById('growthChart').getContext('2d');
+    const growthChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['Antes', '1 mês', '2 meses', '3 meses'],
+        datasets: [{
+          label: 'Desempenho do Negócio (%)',
+          data: [40, 60, 80, 120],
+          borderColor: '#5A30C6',
+          fill: false,
+          tension: 0.3
+        }]
+      },
+      options: {
+        scales: {
+          y: { beginAtZero: true }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
