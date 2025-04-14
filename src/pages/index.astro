@@ -1,65 +1,75 @@
 ---
-import "../styles/global.css";
-import heroImage from "../assets/imagens/fundo-homepage.png";
+import '../styles/global.css'; // Certifique-se de que esse caminho está correto para o seu arquivo global.css
 ---
 
+<!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Fluxo - Gestão Inteligente</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </head>
 
-  <body>
-    <main class="container">
-      <section class="hero">
-        <div class="hero-overlay">
-          <h1 class="hero-title">Fluxo</h1>
-          <p class="hero-subtitle">Organize. Agende. Cresça.</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="Fluxo - Gestão de Clientes" />
+  <title>Fluxo - Gestão de Clientes</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Fluxo - Gestão de Clientes" />
+  <meta property="og:description" content="Transforme sua gestão de clientes com Fluxo" />
+  <meta property="og:image" content="/images/og-image.jpg" />
+  <meta property="og:url" content="https://www.getfluxo.com.br" />
+
+  <!-- Google Fonts (Se necessário) -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/planos">Planos</a></li>
+        <li><a href="/contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero">
+      <h1>Bem-vindo ao Fluxo!</h1>
+      <p>Gerencie seus clientes de forma simples e eficiente com nossas soluções.</p>
+      <a href="/planos" class="btn">Saiba mais</a>
+    </section>
+
+    <section id="planos">
+      <h2>Escolha o seu plano</h2>
+      <div class="planos-container">
+        <div class="plano">
+          <h3>Fluxo Essencial</h3>
+          <p>R$ 149/mês</p>
+          <a href="/planos/essencial" class="btn">Saiba mais</a>
         </div>
-        <img src={heroImage.src} alt="Imagem de fundo Fluxo" class="hero-img" />
-      </section>
-
-      <section class="benefits">
-        <h2 class="section-title">Como o Fluxo transforma seu negócio?</h2>
-        <ul class="benefits-list">
-          <li>📅 Agendamentos automáticos com confirmação por WhatsApp</li>
-          <li>💳 Integração com pagamento direto</li>
-          <li>📈 Economia de até 10h semanais em tarefas repetitivas</li>
-          <li>👥 Atendimento centralizado (SAC + suporte)</li>
-        </ul>
-      </section>
-
-      <section class="plans">
-        <h2 class="section-title">Escolha o plano ideal</h2>
-        <div class="plan-grid">
-          <div class="plan-card">
-            <h3 class="plan-name">Fluxo Essencial</h3>
-            <p class="plan-price">R$149/mês</p>
-            <ul class="plan-features">
-              <li>Agendamento automático</li>
-              <li>Integração WhatsApp</li>
-              <li>Suporte por e-mail</li>
-            </ul>
-          </div>
-
-          <div class="plan-card destaque">
-            <h3 class="plan-name">Fluxo Pro</h3>
-            <p class="plan-price">R$250/mês</p>
-            <ul class="plan-features">
-              <li>Tudo do Essencial</li>
-              <li>Sistema de pagamentos</li>
-              <li>Suporte dedicado</li>
-              <li>Automação completa</li>
-            </ul>
-          </div>
+        <div class="plano">
+          <h3>Fluxo Pro</h3>
+          <p>R$ 250/mês</p>
+          <a href="/planos/pro" class="btn">Saiba mais</a>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <footer class="footer">
-        <p>&copy; 2025 Fluxo. Todos os direitos reservados.</p>
-      </footer>
-    </main>
-  </body>
+    <section id="contato">
+      <h2>Entre em Contato</h2>
+      <p>Tem alguma dúvida? Estamos aqui para ajudar!</p>
+      <a href="/contato" class="btn">Fale Conosco</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Fluxo - Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+
 </html>
- 
