@@ -1,82 +1,428 @@
----
-// Layout base
-import Layout from '../layouts/Layout.astro';
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluxo - Agendamentos Automatizados</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Header com menu fixo -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="#home" class="fluxo-link">Fluxo</a>
+            </div>
+            <nav class="nav">
+                <ul class="menu">
+                    <li><a href="#planos">Planos</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#parceiros">Parceiros</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-// Componentes
-import Header from '../components/Header.astro';
-import Hero from '../components/Hero.astro';
-import SobreFluxo from '../components/SobreFluxo.astro';
-import AgendamentosAutomatizados from '../components/AgendamentosAutomatizados.astro';
-import Beneficios from '../components/Beneficios.astro';
-import SaberMais from '../components/SaberMais.astro';
-import Planos from '../components/Planos.astro';
-import Relatos from '../components/Relatos.astro';
-import Parceiros from '../components/Parceiros.astro';
-import Contato from '../components/Contato.astro';
-import Footer from '../components/Footer.astro';
----
+    <!-- Seção inicial - Home -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Simplifique seus <span>agendamentos</span> com a Fluxo</h1>
+                <p>Automatize, gerencie e otimize o fluxo de atendimento da sua empresa</p>
+                <a href="#planos" class="btn">Comece agora</a>
+            </div>
+            <div class="hero-image">
+                <img src="images/hero-image.svg" alt="Fluxo Agendamento">
+            </div>
+        </div>
+    </section>
 
-<Layout title="Fluxo | Agendamento Automático">
-  <Header />
-  
-  <main>
-    <Hero />
-    
-    <section id="sobre" class="section-padding">
-      <SobreFluxo />
+    <!-- Seção Conheça a Fluxo -->
+    <section id="sobre" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>Conheça a <span>Fluxo</span></h2>
+                <div class="divider"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>A Fluxo nasceu para revolucionar a maneira como empresas gerenciam seus agendamentos. Com foco em inovação tecnológica e simplicidade, desenvolvemos soluções que automatizam processos e otimizam o tempo da sua equipe.</p>
+                    <p>Nossa missão é proporcionar ferramentas que transformem o agendamento de serviços em uma experiência fluida tanto para empresas quanto para seus clientes.</p>
+                    <p>Acreditamos que a tecnologia deve trabalhar a seu favor, liberando tempo para que você se concentre no que realmente importa: atender seus clientes com excelência.</p>
+                </div>
+                <div class="about-image">
+                    <img src="images/about-image.svg" alt="Sobre a Fluxo">
+                </div>
+            </div>
+        </div>
     </section>
-    
-    <section id="agendamentos" class="section-padding bg-light">
-      <AgendamentosAutomatizados />
-    </section>
-    
-    <section id="beneficios" class="section-padding">
-      <Beneficios />
-    </section>
-    
-    <section id="saber-mais" class="section-padding bg-light">
-      <SaberMais />
-    </section>
-    
-    <section id="planos" class="section-padding">
-      <Planos />
-    </section>
-    
-    <section id="relatos" class="section-padding bg-light">
-      <Relatos />
-    </section>
-    
-    <section id="parceiros" class="section-padding">
-      <Parceiros />
-    </section>
-    
-    <section id="contato" class="section-padding">
-      <Contato />
-    </section>
-  </main>
-  
-  <Footer />
-</Layout>
 
-<style>
-  main {
-    width: 100%;
-    color: #2d2d2d;
-    font-size: 16px;
-    line-height: 1.6;
-  }
-  
-  .section-padding {
-    padding: 5rem 0;
-  }
-  
-  .bg-light {
-    background-color: #f9f5ff;
-  }
-  
-  @media (max-width: 768px) {
-    .section-padding {
-      padding: 3rem 0;
-    }
-  }
-</style>
+    <!-- Seção Agendamentos Automatizados -->
+    <section id="agendamentos" class="scheduling">
+        <div class="container">
+            <div class="section-header">
+                <h2>Agendamentos <span>Automatizados</span></h2>
+                <div class="divider"></div>
+            </div>
+            <div class="scheduling-content">
+                <div class="scheduling-image">
+                    <img src="images/scheduler.svg" alt="Agendamentos Automatizados">
+                </div>
+                <div class="scheduling-text">
+                    <h3>Transforme seu processo de agendamento</h3>
+                    <p>Nosso sistema inteligente reduz em até 80% o tempo gasto com agendamentos manuais, eliminando conflitos de horários e otimizando sua agenda.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <div class="stat-number">97%</div>
+                            <div class="stat-label">Redução de faltas</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">30%</div>
+                            <div class="stat-label">Aumento na produtividade</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">65%</div>
+                            <div class="stat-label">Clientes mais satisfeitos</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Benefícios da Fluxo -->
+    <section id="beneficios" class="benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2>Benefícios da <span>Fluxo</span></h2>
+                <div class="divider"></div>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Agilidade</h3>
+                    <p>Reduza o tempo de agendamento e confirmação de horários com processos automatizados</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>Organização</h3>
+                    <p>Centralize todas as suas marcações em um só lugar com visualização clara e intuitiva</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Produtividade</h3>
+                    <p>Libere sua equipe de tarefas administrativas para focar no atendimento ao cliente</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3>Notificações</h3>
+                    <p>Lembretes automáticos para clientes reduzem drasticamente as faltas e cancelamentos de última hora</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Saber Mais -->
+    <section id="saber-mais" class="learn-more">
+        <div class="container">
+            <div class="section-header">
+                <h2>Saber <span>Mais</span></h2>
+                <div class="divider"></div>
+            </div>
+            <div class="learn-more-grid">
+                <div class="learn-card">
+                    <div class="learn-icon">
+                        <i class="fas fa-hourglass-half"></i>
+                    </div>
+                    <h3>Economize tempo</h3>
+                    <p>Automatize o processo de agendamento e ganhe horas produtivas na sua semana</p>
+                    <a href="economize-tempo.html" class="btn-small">Saber mais</a>
+                </div>
+                <div class="learn-card">
+                    <div class="learn-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Agilize seu Agendamento</h3>
+                    <p>Processos simplificados que eliminam burocracias e aceleram confirmações</p>
+                    <a href="agilize-agendamento.html" class="btn-small">Saber mais</a>
+                </div>
+                <div class="learn-card">
+                    <div class="learn-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Otimize seu atendimento</h3>
+                    <p>Ferramentas inteligentes para melhorar a experiência de seus clientes</p>
+                    <a href="otimize-atendimento.html" class="btn-small">Saber mais</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Escolha seu Plano -->
+    <section id="planos" class="plans">
+        <div class="container">
+            <div class="section-header">
+                <h2>Escolha seu <span>Plano</span></h2>
+                <div class="divider"></div>
+            </div>
+            <div class="plans-container">
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3>Plano Essencial</h3>
+                        <div class="plan-price">
+                            <span class="price">R$ 79</span>
+                            <span class="period">/mês</span>
+                        </div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Agendamento online</li>
+                        <li><i class="fas fa-check"></i> Até 100 agendamentos/mês</li>
+                        <li><i class="fas fa-check"></i> Lembretes por email</li>
+                        <li><i class="fas fa-check"></i> Agenda compartilhada</li>
+                        <li><i class="fas fa-check"></i> Suporte por email</li>
+                    </ul>
+                    <a href="#contato" class="btn">Começar agora</a>
+                </div>
+                <div class="plan-card featured">
+                    <div class="plan-header">
+                        <h3>Plano Pro</h3>
+                        <div class="plan-price">
+                            <span class="price">R$ 129</span>
+                            <span class="period">/mês</span>
+                        </div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Tudo do plano Essencial</li>
+                        <li><i class="fas fa-check"></i> Agendamentos ilimitados</li>
+                        <li><i class="fas fa-check"></i> Lembretes por SMS e WhatsApp</li>
+                        <li><i class="fas fa-check"></i> Personalização de marca</li>
+                        <li><i class="fas fa-check"></i> Integrações com outros sistemas</li>
+                        <li><i class="fas fa-check"></i> Relatórios avançados</li>
+                        <li><i class="fas fa-check"></i> Suporte prioritário 24/7</li>
+                    </ul>
+                    <a href="#contato" class="btn">Começar agora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Relatos -->
+    <section id="relatos" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>O que nossos <span>clientes</span> dizem</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"A Fluxo transformou completamente a gestão de agendamentos do meu consultório. Reduzi faltas em 90% e aumentei a produtividade da minha secretária."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/testimonial-1.jpg" alt="Dra. Ana Silva">
+                        <div class="author-info">
+                            <h4>Dra. Ana Silva</h4>
+                            <p>Clínica Bem Estar</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Nunca imaginei que pudesse economizar tanto tempo com agendamentos. O sistema é intuitivo e meus clientes adoram a facilidade para marcar horários."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/testimonial-2.jpg" alt="Carlos Mendes">
+                        <div class="author-info">
+                            <h4>Carlos Mendes</h4>
+                            <p>Studio Fitness</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"As notificações automáticas são um diferencial incrível. Meus clientes chegam sempre no horário e raramente temos cancelamentos de última hora."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/testimonial-3.jpg" alt="Mariana Costa">
+                        <div class="author-info">
+                            <h4>Mariana Costa</h4>
+                            <p>Salão Beauty Plus</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Parceiros -->
+    <section id="parceiros" class="partners">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nossos <span>Parceiros</span></h2>
+                <div class="divider"></div>
+            </div>
+            <div class="partners-grid">
+                <div class="partner-logo">
+                    <img src="images/partner-1.svg" alt="Parceiro 1">
+                </div>
+                <div class="partner-logo">
+                    <img src="images/partner-2.svg" alt="Parceiro 2">
+                </div>
+                <div class="partner-logo">
+                    <img src="images/partner-3.svg" alt="Parceiro 3">
+                </div>
+                <div class="partner-logo">
+                    <img src="images/partner-4.svg" alt="Parceiro 4">
+                </div>
+                <div class="partner-logo">
+                    <img src="images/partner-5.svg" alt="Parceiro 5">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção FAQ -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Perguntas <span>Frequentes</span></h2>
+                <div class="divider"></div>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Como funciona o sistema de agendamento da Fluxo?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nosso sistema permite que você configure sua disponibilidade e serviços oferecidos. Seus clientes podem acessar um link personalizado para agendar horários disponíveis. Todos recebem confirmações e lembretes automáticos.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Preciso ter conhecimento técnico para usar a plataforma?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Não é necessário conhecimento técnico. Nossa interface é intuitiva e fácil de usar. Além disso, oferecemos suporte e tutoriais para garantir que você aproveite ao máximo todas as funcionalidades.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>O sistema é compatível com dispositivos móveis?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim! A Fluxo é totalmente responsiva e funciona perfeitamente em smartphones, tablets e computadores. Você e seus clientes podem acessar o sistema de qualquer dispositivo.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Posso personalizar as notificações enviadas aos clientes?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Com certeza! Você pode personalizar todas as mensagens enviadas aos seus clientes, incluindo confirmações, lembretes e agradecimentos pós-atendimento.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Como é feito o pagamento dos planos?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Trabalhamos com assinatura mensal ou anual, com pagamento via cartão de crédito, boleto bancário ou PIX. Oferecemos desconto para pagamentos anuais.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Entre em Contato -->
+    <section id="contato" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Entre em <span>Contato</span></h2>
+                <div class="divider"></div>
+            </div>
+            <div class="contact-grid">
+                <a href="https://wa.me/5561982913633" target="_blank" class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>WhatsApp</h3>
+                    <p>(61) 98291-3633</p>
+                </a>
+                <a href="https://instagram.com/Fluxo.Tech" target="_blank" class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <h3>Instagram</h3>
+                    <p>@Fluxo.Tech</p>
+                </a>
+                <a href="mailto:syrinxum@gmail.com" class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>E-mail</h3>
+                    <p>syrinxum@gmail.com</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#home" class="fluxo-link">Fluxo</a>
+                    <p>Transformando agendamentos em experiências incríveis</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Links Rápidos</h4>
+                        <ul>
+                            <li><a href="#home">Início</a></li>
+                            <li><a href="#planos">Planos</a></li>
+                            <li><a href="#faq">FAQ</a></li>
+                            <li><a href="#sobre">Sobre</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Contato</h4>
+                        <ul>
+                            <li><a href="https://wa.me/5561982913633" target="_blank">WhatsApp: (61) 98291-3633</a></li>
+                            <li><a href="https://instagram.com/Fluxo.Tech" target="_blank">Instagram: @Fluxo.Tech</a></li>
+                            <li><a href="mailto:syrinxum@gmail.com">E-mail: syrinxum@gmail.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Fluxo. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
