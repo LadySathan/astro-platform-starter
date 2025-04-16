@@ -1,0 +1,174 @@
+---
+// Componente da seção hero
+---
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text" data-aos="fade-right" data-aos-delay="100">
+        <h1>Automatize seus <span class="text-primary">agendamentos</span> e transforme sua produtividade</h1>
+        <p>Com a Fluxo, você otimiza todo o processo de agendamentos, reduz falhas e economiza tempo para focar no que realmente importa.</p>
+        <div class="hero-buttons">
+          <a href="#planos" class="btn btn-primary">Conheça nossos planos</a>
+          <a href="#sobre" class="btn btn-outline">Saiba mais</a>
+        </div>
+      </div>
+      
+      <div class="hero-image" data-aos="fade-up" data-aos-delay="300">
+        <img src="/api/placeholder/600/500" alt="Fluxo agendamento automatizado" />
+      </div>
+    </div>
+    
+    <div class="hero-stats">
+      <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
+        <h3>98%</h3>
+        <p>Redução de falhas de agendamento</p>
+      </div>
+      
+      <div class="stat-item" data-aos="fade-up" data-aos-delay="500">
+        <h3>75%</h3>
+        <p>Tempo economizado em gerenciamento</p>
+      </div>
+      
+      <div class="stat-item" data-aos="fade-up" data-aos-delay="600">
+        <h3>5000+</h3>
+        <p>Usuários satisfeitos</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="hero-wave">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#f9f5ff" fill-opacity="1" d="M0,192L48,176C96,160,192,128,288,122.7C384,117,480,139,576,165.3C672,192,768,224,864,224C960,224,1056,192,1152,165.3C1248,139,1344,117,1392,106.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+    </svg>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    padding: 10rem 0 5rem;
+    background: linear-gradient(135deg, #f5edff 0%, #e6d6ff 100%);
+    overflow: hidden;
+  }
+  
+  .hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 3rem;
+  }
+  
+  .hero-text h1 {
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-text p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: var(--text-gray);
+    max-width: 90%;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .hero-image {
+    position: relative;
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .hero-image img {
+    border-radius: 10px;
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 4rem;
+    position: relative;
+    z-index: 10;
+  }
+  
+  .stat-item {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(5px);
+    transition: var(--transition);
+  }
+  
+  .stat-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .stat-item h3 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translatey(0px);
+    }
+    50% {
+      transform: translatey(-15px);
+    }
+    100% {
+      transform: translatey(0px);
+    }
+  }
+  
+  /* Responsividade */
+  @media (max-width: 992px) {
+    .hero-content {
+      grid-template-columns: 1fr;
+    }
+    
+    .hero-text {
+      text-align: center;
+    }
+    
+    .hero-text p {
+      max-width: 100%;
+    }
+    
+    .hero-buttons {
+      justify-content: center;
+    }
+    
+    .hero-image {
+      margin: 0 auto;
+      max-width: 80%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero {
+      padding: 8rem 0 4rem;
+    }
+    
+    .hero-stats {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-top: 3rem;
+    }
+  }
+</style>
